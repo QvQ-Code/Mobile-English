@@ -1,0 +1,163 @@
+@media (max-width: 892px){
+	.mobile_style {
+		display: block;
+	}
+	#break {
+		display: block;
+		width: 50px;
+		flex-shrink: 0;
+	}
+	.login_true_page {
+		background-color: #F0F2F7;
+		padding: 0px 0px 30px 0;
+		overflow: hidden;
+		display: flex;
+	}
+	.login_true_page .main_container:nth-child(1) {
+		width: 0%;
+		height: 100vh;
+		position: absolute;
+		background-color: #F0F2F7;
+		top: 0;
+		border: none;
+		overflow: hidden;
+		z-index: 100;
+	}
+	.login_true_page .main_container:nth-child(1) h5 {
+		display: none;
+	}
+	.login_true_page .main_container:nth-child(1) .profile_go {
+		display: none;
+	}
+	.login_true_page .main_container:nth-child(1) .external_link h5 {
+		display: block;
+	}
+	.mobile_style .profile_go {
+		display: flex;
+		padding: 10px;
+		margin: 0 30px;
+		border-radius: 10px;
+		margin-top: 27px;
+		margin-bottom: 17px;
+		background-color: white;
+	}
+	.mobile_style .img_back {
+		width: 60px;
+		height: 60px;
+		padding: 4px;
+		flex-shrink: 0;
+		overflow: hidden;
+		border-radius: 30px;
+		background-image: linear-gradient(145deg, white 50%, orange 50%);
+	}
+	.mobile_style .img_back img {
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		background-color: white;
+	}
+	.mobile_style .name_email {
+		height: 60px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding-left: 20px;
+	}
+	.mobile_style .name_email span {display: block;}
+	.mobile_style .name_email span:nth-child(1) {
+		font-weight: bold;
+	}
+	.mobile_style .name_email span:nth-child(2) {
+		font-size: 13px;
+	}
+	.mobile_style .name_email span a {
+		color: black;
+	}
+	.login_true_page .main_container:nth-child(2){
+		width: 100%;
+		padding-left: 0;
+	}
+	.login_true_page .main_container:nth-child(2) .lesson_wrapper {
+		width: 100%;
+		justify-content: flex-start;
+		flex-wrap: nowrap;
+		border-radius:  0;
+		margin-bottom: 17px;
+		padding: 10px 80px;
+		overflow-x: auto;
+		background-color: transparent;
+	}
+	#Main .lesson_wrapper {
+		width: 100%;
+		flex-direction: column;
+	}
+	.login_true_page .main_container:nth-child(2) .lesson_wrapper .item {
+		flex: 0 0 auto;
+		box-shadow: 3px 3px 10px -5px rgba(0,0,0,.6);
+	}
+	#Main .lesson_wrapper .item {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	#Main .lesson_wrapper .item a button {
+		width: 75%;
+		height: 40px;
+		justify-content: flex-end;
+	}
+	.login_true_page .main_container:nth-child(2) .book_list h5 {
+		margin-top: 5px;
+		margin-left: 0px;
+		padding-left: 0;
+	}
+	.login_true_page .main_container:nth-child(2) .book_list .sep {
+		margin-left: 0px;
+		padding-left: 0;	
+	}
+	.login_true_page .main_container:nth-child(2) .book_list {
+		margin: 0 30px;
+	}
+	.login_true_page .main_container:nth-child(2) .book_list a {
+		padding: 0;
+		border-radius: 0;
+		flex-wrap: wrap;
+		margin-bottom: 10px;
+		justify-content: flex-start;
+	}
+	.login_true_page .main_container:nth-child(2) .book_list a:hover {
+		background-color: transparent;
+	}
+	.login_true_page .main_container:nth-child(2) .book_list span {
+		height: initial;
+		line-height: 25px;
+	}
+	.login_true_page .main_container:nth-child(2) .book_list span:nth-child(1) {
+		width: 20px;
+		flex-shrink: 0;
+		text-align: left;
+		margin-right: 10px;
+	}
+	.login_true_page .main_container:nth-child(2) .book_list span:nth-child(2) {
+		width: 90%;
+		flex-grow: 1;
+		padding: 0;
+	}
+	.login_true_page .main_container:nth-child(2) .book_list span:nth-child(3) {
+		width: initial;
+		display: inline-block;
+		text-align: left;
+		padding-left: 30px;
+	}
+	.login_true_page .main_container:nth-child(2) .book_list span:nth-child(4) {
+		width: initial;
+		height: 25px;
+		margin: 0;
+		padding: 0 10px;
+		color: white;
+		font-weight: bold;
+		border-radius: 3px;
+		line-height: 25px;
+	}
+	#Logout_button {
+		font-weight: bold;
+	}
+}
