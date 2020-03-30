@@ -1,35 +1,34 @@
 <?php 
 session_start();
 
-if (isset($_POST["wod_save"])) {
-	$word = trim($_POST["word"]);
-	$status = $_POST["status"];
+if (isset($_POST["lesson_save"])) {
+	$lesson_title = $_POST["lesson_title"];
+	$status	= $_POST["status"];
 	$range = $_POST["range"];
-	$content = $_POST["WoD_content"];
-	$extend = $_POST["WoD_content_extend"];
+	$lesson_content = $_POST["lesson_content"];
+	$lesson_content_extend = $_POST["lesson_content_extend"];
 
-	require "config/database.php";
-	$check = "SELECT * FROM site_lesson WHERE title =$word";
-	$test = $db->query($check);
-	if ($test) {
-		$wod = $test->fetch_assoc();
-		if($word == $wod["word"]);
+	require 'config/database.php';
 
-		$_SESSION["wod"] = "Lesson already exists!";
-		unset($_POST);
-		header("location: lesson_of_the_day.php");
+	$sql_check = "SELECT * FROM site_lesson WHERE title = $lesson_title";
+	$check_data = $db->query($sql_check);
+	
+	if ($check_data) {
+		$check = $check_data->fetch_assoc();
+		if ($check["title"] == $lesson_title)
+		$_SESSION["wod"] = "This lesson title is already exist";
 		exit();
 	}
 
-	$sql = "INSERT INTO `site_lesson` (`id`, `title`, `content`, `extend`, `status`, `lesson_range`, `date`) VALUES (NULL, '$word', '$content', '$extend', '$status', '$range', CURRENT_DATE)";
-	$set = $db->query($sql);
-	if ($set) {
-		$_SESSION["wod"] = "Lesson has been added.";
-		unset($_POST);
-		header("location: word_of_the_day.php");
+	$sql_insert = "INSERT INTO `site_lesson` (`id`, `title`, `content`, `extend`, `status`, `lesson_range`, `date`) VALUES (NULL, '$lesson_title', '$lesson_content', '$lesson_content', '$status', '$range', CURRENT_DATE)";
+	$insert_proccess = $db->query($sql_insert);
+	
+	if ($insert_proccess) {
+		$_SESSION["wod"] = "Lesson has been added";
+		header ("location: lesson_of_the_day.php");
 		exit();
 	} else {
-		$_SESSION["wod"] = "Fail to add a word.";
+		$_SESSION["wod"] = "Fail to add lesson";
 	}
 }
 ?>
@@ -70,7 +69,7 @@ if (isset($_POST["wod_save"])) {
 		<div class="wrapper">
 			<div class="form-group">
 				<label>Title</label>
-				<input type="text" name="word" placeholder="Enter title here" required>
+				<input type="text" name="lesson_title" placeholder="Enter title here" required>
 			</div>		
 			<div class="form-group">
 				<label>Active</label>
@@ -95,27 +94,27 @@ if (isset($_POST["wod_save"])) {
 				</div>
 			</div>
 			<div class="form-group">
-				<input type="submit" name="wod_save" value="save">
+				<input type="submit" name="lesson_save" value="save">
 			</div>
 		</div>
 
 		<div class="wrapper">
 			<div class="form-group">
 				<label>Description</label>
-				<textarea name="WoD_content">
+				<textarea name="lesson_content">
 					
 				</textarea>
 			    <script>
-			    	CKEDITOR.replace( 'WoD_content' );
+			    	CKEDITOR.replace( 'lesson_content' );
 			    </script>
 			</div>			
 			<div class="form-group">
 				<label>Extend</label>
-				<textarea name="WoD_content_extend">
+				<textarea name="lesson_content_extend">
 					
 				</textarea>
 			    <script>
-			    	CKEDITOR.replace( 'WoD_content_extend' );
+			    	CKEDITOR.replace( 'lesson_content_extend' );
 			    </script>
 			</div>			
 		</div>	
