@@ -25,9 +25,9 @@ $chap_ref = $_GET['chap_ref'];
 ?>
 <body>
 <div class="read-container">
-<?php 
-	include "header.php"; 
-?>
+
+<div class="blank_space"></div>
+
 <div class="content-wrapper" id="back_to_top">
 
 	<button class="left_nav_button" id="left_nav_button" onclick="left_nav_open()">
@@ -112,12 +112,13 @@ $chap_ref = $_GET['chap_ref'];
 
 			$another = $db->query($sql);
 			$data_object = $another->fetch_assoc();
+			
 			$n = (int)$chap_ref+1;
 			$p = (int)$chap_ref-1;
 
 		?>
 
-		<div class="next-btn prev-btn">
+		<!-- div class="next-btn prev-btn">
 			<?php if($chap_ref !== '1' && $data_object !== NULL) { ?>
 				<a style="float: left;" href="read.php?book_ref=<?php echo $data_object["book_id"];?>&chap_ref=<?php echo $p;?>">Prev Chapter</a>
 			<?php } ?>
@@ -125,9 +126,22 @@ $chap_ref = $_GET['chap_ref'];
 			<?php if ($data_object !== NULL) { ?>
 				<a style="float: right" href="read.php?book_ref=<?php echo $data_object["book_id"];?>&chap_ref=<?php echo $n;?>">Next Chapter</a>
 			<?php } ?>				
-		</div>
+		</div -->
 		<!-- End .next-btn prev-btn-->
 
+		<div id="book_chapter">
+			<a>Chapters &#9661;</a>
+			<div class="chapter_list">
+				
+			</div>
+			<div>
+				<?php 
+					$book_name_data = $db->query("SELECT name FROM book WHERE book_id = $book_id");
+					$book_name = $book_name_data->fetch_assoc();
+					echo $book_name["name"];
+				?>		
+			</div>
+		</div>
 		
 		<div class="title"><?php echo $data_object["heading"]; ?></div>
 		<!-- End .title -->
@@ -166,7 +180,7 @@ $chap_ref = $_GET['chap_ref'];
 	</div>
 	<!-- End .right-side -->
 
-	<div id="BackToTop">
+	<div style="display: none;" id="BackToTop">
 		<a href="#Header">
 			<svg style="width:24px;height:24px" viewBox="0 0 24 24">
 			    <path fill="currentColor" d="M13,18V10L16.5,13.5L17.92,12.08L12,6.16L6.08,12.08L7.5,13.5L11,10V18H13M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2Z" />

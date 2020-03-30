@@ -2222,6 +2222,25 @@
 			}
 		}
 	}
+
+	#book_chapter {
+		width: 100%;
+		position: relative;
+		#background-color: #ebe9e1;
+		background-color: rgba(223,221,213,0.33);
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		-ms-border-radius: 3px;
+		border-radius: 3px;
+		padding: 8px 12px 6px;
+		margin-bottom: 20px;
+		font-size: 13px;
+		font-weight: bold;
+		display: flex;
+	}
+	#book_chapter .chapter_list {
+		margin-right: 10px;
+	}
 /* End Read */
 
 /* Success confirm */
