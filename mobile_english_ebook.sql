@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 28, 2020 at 03:30 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.3
+-- Waktu pembuatan: 30 Mar 2020 pada 10.05
+-- Versi server: 10.4.11-MariaDB
+-- Versi PHP: 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,11 +21,13 @@ SET time_zone = "+00:00";
 --
 -- Database: `mobile_english_ebook`
 --
+CREATE DATABASE IF NOT EXISTS `mobile_english_ebook` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `mobile_english_ebook`;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `book`
+-- Struktur dari tabel `book`
 --
 
 CREATE TABLE `book` (
@@ -38,7 +40,7 @@ CREATE TABLE `book` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `book`
+-- Dumping data untuk tabel `book`
 --
 
 INSERT INTO `book` (`book_id`, `book_num`, `cover_img`, `name`, `harga`, `sinop`) VALUES
@@ -49,7 +51,7 @@ INSERT INTO `book` (`book_id`, `book_num`, `cover_img`, `name`, `harga`, `sinop`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `book_chapter`
+-- Struktur dari tabel `book_chapter`
 --
 
 CREATE TABLE `book_chapter` (
@@ -62,7 +64,7 @@ CREATE TABLE `book_chapter` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `book_chapter`
+-- Dumping data untuk tabel `book_chapter`
 --
 
 INSERT INTO `book_chapter` (`chapter_id`, `book_id`, `chapter`, `page`, `heading`, `content`) VALUES
@@ -76,7 +78,7 @@ INSERT INTO `book_chapter` (`chapter_id`, `book_id`, `chapter`, `page`, `heading
 -- --------------------------------------------------------
 
 --
--- Table structure for table `book_price`
+-- Struktur dari tabel `book_price`
 --
 
 CREATE TABLE `book_price` (
@@ -85,7 +87,7 @@ CREATE TABLE `book_price` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `book_price`
+-- Dumping data untuk tabel `book_price`
 --
 
 INSERT INTO `book_price` (`book_id`, `price`) VALUES
@@ -94,7 +96,7 @@ INSERT INTO `book_price` (`book_id`, `price`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `book_trial`
+-- Struktur dari tabel `book_trial`
 --
 
 CREATE TABLE `book_trial` (
@@ -104,7 +106,7 @@ CREATE TABLE `book_trial` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `book_trial`
+-- Dumping data untuk tabel `book_trial`
 --
 
 INSERT INTO `book_trial` (`item_id`, `book_id`, `timestamp`) VALUES
@@ -113,7 +115,7 @@ INSERT INTO `book_trial` (`item_id`, `book_id`, `timestamp`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `site_article`
+-- Struktur dari tabel `site_article`
 --
 
 CREATE TABLE `site_article` (
@@ -131,7 +133,7 @@ CREATE TABLE `site_article` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `site_article`
+-- Dumping data untuk tabel `site_article`
 --
 
 INSERT INTO `site_article` (`article_id`, `banner`, `title`, `content`, `date`, `author`, `draf`, `post`, `views`, `category`, `for_member`) VALUES
@@ -140,7 +142,7 @@ INSERT INTO `site_article` (`article_id`, `banner`, `title`, `content`, `date`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `site_info`
+-- Struktur dari tabel `site_info`
 --
 
 CREATE TABLE `site_info` (
@@ -149,7 +151,7 @@ CREATE TABLE `site_info` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `site_info`
+-- Dumping data untuk tabel `site_info`
 --
 
 INSERT INTO `site_info` (`id`, `about`) VALUES
@@ -158,7 +160,7 @@ INSERT INTO `site_info` (`id`, `about`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `site_invitation`
+-- Struktur dari tabel `site_invitation`
 --
 
 CREATE TABLE `site_invitation` (
@@ -169,7 +171,7 @@ CREATE TABLE `site_invitation` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `site_lead`
+-- Struktur dari tabel `site_lead`
 --
 
 CREATE TABLE `site_lead` (
@@ -179,7 +181,7 @@ CREATE TABLE `site_lead` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `site_lead`
+-- Dumping data untuk tabel `site_lead`
 --
 
 INSERT INTO `site_lead` (`id_lead`, `title`, `content`) VALUES
@@ -188,7 +190,7 @@ INSERT INTO `site_lead` (`id_lead`, `title`, `content`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `site_lesson`
+-- Struktur dari tabel `site_lesson`
 --
 
 CREATE TABLE `site_lesson` (
@@ -202,16 +204,17 @@ CREATE TABLE `site_lesson` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `site_lesson`
+-- Dumping data untuk tabel `site_lesson`
 --
 
 INSERT INTO `site_lesson` (`id`, `title`, `content`, `extend`, `status`, `lesson_range`, `date`) VALUES
-(10, 'such', '<p><span style=\"font-family:Garamond; font-size:medium\"><strong><span style=\"color:#ff0000\">| such as</span> </strong><br />\r\n<span style=\"color:#ff0000\">(<strong>a</strong>)</span> <strong>misalnya</strong><br />\r\n(syn <span style=\"color:#0000ff\"><strong>for example</strong></span>)<br />\r\n<span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">â–ª </span></span><span style=\"color:#0000ff\">risks such as flood and fire</span><br />\r\nrisiko2 seperti banjir dan kebakaran<br />\r\n<span style=\"color:#0000ff\">â–ª &lsquo;There are a lot of activities to do.&rsquo; &lsquo;Such as?&rsquo;</span><br />\r\n&ldquo;Banyak kegiatan2 yg utk dilakukan.&rdquo; &ldquo;Misalnya?&rdquo;<br />\r\n<span style=\"color:#ff0000\">(<strong>b</strong>)</span> <strong>seperti</strong><br />\r\n(syn <span style=\"color:#0000ff\"><strong>like</strong></span>)<br />\r\n<span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">â–ª </span></span><span style=\"color:#0000ff\">Activities such as these are fun.</span><br />\r\nKegiatan2 seperti ini menyenangkan.</span></p>\r\n', '<p><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff; font-size:x-large\"><strong>such</strong></span><br />\r\n/<span style=\"font-family:DictBats\">sVtS</span>/<br />\r\ndeterminer<br />\r\n<span style=\"color:#ff0000\"><strong>1</strong></span> <strong>demikian</strong><br />\r\n<span style=\"color:#0000ff\"><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\"><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\"><span style=\"font-family:Garamond; font-size:medium\"><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">â–ª </span></span></span></span></span></span></span>Such attitude is not good.</span><br />\r\nSikap yg demikian tidaklah baik.<br />\r\n<span style=\"color:#0000ff\">â–ª I&rsquo;ve never seen such a beautiful woman.</span><br />\r\nSaya belum pernah melihat wanita yg demikian cantik.<br />\r\n<span style=\"color:#000000\"><span style=\"color:#0000ff\">â–ª She was uneducated. such was our opinion.</span><br />\r\nDia tidak terpelajar. Demikianlah pendapat kami.<br />\r\n<span style=\"color:#0000ff\">â–ª What should we do in such a situation?</span><br />\r\nApa yg harus kita lakukan dl keadaan yg demikian?<br />\r\n<span style=\"color:#0000ff\">â–ª You definitely need a teacher, or some such person.</span><br />\r\nAnda pastinya membutuhkan seorg guru, atau org yg demiian.<br />\r\n<span style=\"color:#0000ff\">â–ª He said no such thing. &nbsp;</span><br />\r\nDia tidak mengatakan hal yg demikian.<br />\r\n<span style=\"color:#0000ff\">â–ª Living things need water and should be treated as such.</span><br />\r\nBenda hidup memerlukan air dan harus diperlakukan demikian.</span><br />\r\n<span style=\"color:#ff0000\"><strong>2</strong></span> <strong>begitu; sangat (digunakan utk penekanan)</strong><br />\r\n<span style=\"color:#0000ff\">I felt such a stupid person.</span><br />\r\nSaya merasa menjadi ssorg yg begitu bodoh.<br />\r\n<span style=\"color:#ff0000\"><strong>3</strong></span> <strong>(digunakan utk menunjukkan hasil dari suatu keadaan, perbuatan, dll.)</strong><br />\r\n<span style=\"color:#ff0000\">(<strong>a</strong>)</span> <span style=\"color:#0000ff\"><strong>such &hellip;that </strong></span><br />\r\n<strong>begitu/ sedemikian &hellip; sehingga</strong><br />\r\n<span style=\"color:#0000ff\"><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">â–ª </span></span>He was in such a hurry that he fell off his bicycle.</span><br />\r\nDia dl keadaan begitu ter-buru2 sehingga dia jatuh dari sep&eacute;danya.<br />\r\n<span style=\"color:#ff0000\">(<strong>b</strong>) <strong>be</strong> <strong>such that</strong>; <strong>be</strong> <strong>such as to inf</strong></span><br />\r\n<strong>sedemikian rupa sehingga</strong><br />\r\n<span style=\"color:#0000ff\"><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">â–ª </span></span>His intelligence was such that he graduated from senior high school at the age of 12.</span><br />\r\nKepintarannya dl keadaan sedemikian rupa sehingga dia lulus dari SMA di usia 12.<br />\r\n<span style=\"color:#0000ff\">â–ª His manner was&nbsp;<span style=\"font-family:Garamond; font-size:medium\">such</span> as to offed most of us.</span><br />\r\nPerilakunya sedemiian rupa sehingga membuat sebagian besar dari kami tersinggung.<br />\r\n<span style=\"color:#ff0000\">(<strong>c</strong>)</span>&nbsp;<span style=\"color:#ff0000\"><strong><span style=\"font-family:Garamond; font-size:medium\">such</span> a way</strong>/<strong>manner that;&nbsp;<span style=\"font-family:Garamond; font-size:medium\">such</span> a way</strong>/</span><strong><span style=\"color:#ff0000\">manner as to inf</span><br />\r\ndengan cara sedemikian rupa sehingga</strong><br />\r\n<span style=\"color:#0000ff\">â–ª Do it in&nbsp;<span style=\"font-family:Garamond; font-size:medium\">such</span> a way/manner that nobody will find out.</span><br />\r\nLakukanlah dengan cara yg sedemikian rupa sehingga tidak akan diketahui ol&eacute;h org lain.<br />\r\n<span style=\"color:#0000ff\">â–ª Do it in such a way/manner as to impress her.</span><br />\r\nLakukanlah dengan cara sedemikian rupa sehingga membuat dia terkesan.<br />\r\n<strong><span style=\"color:#ff0000\">â–  IDIOM </span><br />\r\n<span style=\"color:#ff0000\"><span style=\"color:#000000\"><span style=\"color:#ff0000\"><strong>| &hellip; and such </strong></span></span></span></strong><br />\r\n<span style=\"color:#ff0000\"><span style=\"color:#000000\">(</span></span><span style=\"color:#ff0000\"><span style=\"color:#000000\">lisan</span></span><span style=\"color:#ff0000\"><span style=\"color:#000000\">)</span></span><strong><span style=\"color:#ff0000\"><span style=\"color:#000000\"> dan yg sejenis<br />\r\n<span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\"><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">â–ª </span></span></span></span></span></span></strong><span style=\"color:#0000ff\">There will be french fries, fried chicken, burgers and such.</span><span style=\"color:#0000ff\"> </span><br />\r\n<strong><span style=\"color:#000000\">Akan ada kentang gor&eacute;ng, ayam gor&eacute;ng, burger, dan yg sejenisnya.</span><br />\r\n<span style=\"color:#ff0000\">| as such</span><br />\r\npersis seperti itu</strong><br />\r\n<span style=\"color:#0000ff\"><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">â–ª </span></span>There isn&rsquo;t a swimming pool as such, but they do have a small pool.</span><br />\r\nTidak ada kolam renang yg persis seperti itu, tetapi mer&eacute;ka m&eacute;mang memiliki sebuah kolam kecil.<br />\r\n<span style=\"color:#ff0000\"><strong>| such &hellip; as </strong></span>(juga <span style=\"color:#ff0000\"><strong>such as</strong></span>)<br />\r\n<strong>seperti; semacam</strong><br />\r\n<span style=\"color:#0000ff\"><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">â–ª </span></span>occupations such as drivers and teachers</span><br />\r\npekerjaan2 seperti supir2 dan guru2<br />\r\n<span style=\"color:#0000ff\">â–ª such attacks as bombings and suicides</span><br />\r\nserangan2 seperti serangan bom dan bunuh diri<br />\r\n<span style=\"color:#000000\"><span style=\"color:#ff0000\"><strong>| such &hellip; as</strong>/<strong>who</strong>/</span><strong><span style=\"color:#ff0000\">that</span> </strong><br />\r\ndigunakan utk menunjuk suatu kelompok<br />\r\n<span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">â–ª </span></span><span style=\"color:#0000ff\">Such individuals who support this point of view should be respected.</span><br />\r\nOrg2 yg mendukung pandangan ini harus dihargai.</span><br />\r\n<span style=\"color:#ff0000\"><strong>| such of sb</strong>/</span><strong><span style=\"color:#ff0000\">sth as</span> </strong><br />\r\ndigunakan utk menunjuk suatu kelompok<br />\r\n<span style=\"font-family:Garamond; font-size:medium\"><strong><span style=\"color:#ff0000\">|</span></strong></span> <span style=\"color:#ff0000\"><strong>Such of you as wish to come earlier will be welcomed.</strong></span><br />\r\nMer&eacute;ka yg ingin datang lebih awal akan disambut baik.<br />\r\n<strong><span style=\"color:#ff0000\">| to such an extent </span></strong><span style=\"color:#ff0000\">/ </span><strong><span style=\"color:#ff0000\">a degree that</span><br />\r\nsampai ke tingkat yg demikian sehingga</strong><br />\r\n<span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#000000\"><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">â–ª </span></span></span></span><span style=\"color:#0000ff\">Her health was deterioting to such a degree that she could not stand up.</span><br />\r\nKes&eacute;hatannya terus memburuk sampai ke tingkat yg sedemikian rupa di mana dia tidak bisa berdiri.<br />\r\n<span style=\"color:#ff0000\"><strong>| there is no such thing</strong>/</span><strong><span style=\"color:#ff0000\">person</span></strong><br />\r\n<strong>tidak ada hal/org seperti itu</strong><br />\r\n<span style=\"color:#0000ff\"><span style=\"font-family:Garamond; font-size:medium\"><span style=\"font-family:Garamond; font-size:medium\"><span style=\"font-family:Garamond; font-size:medium\">â–ª </span></span></span>There is no such thing as a free lunch.</span><br />\r\n<span style=\"color:#000000\">Tidak ada hal seperti makan siang gratis.</span><br />\r\n<strong><span style=\"color:#ff0000\">| such as</span> </strong><br />\r\n<span style=\"color:#ff0000\">(<strong>a</strong>)</span> <strong>misalnya</strong><br />\r\n(syn <span style=\"color:#0000ff\"><strong>for example</strong></span>)<br />\r\n<span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">â–ª </span></span><span style=\"color:#0000ff\">risks such as flood and fire</span><br />\r\nrisiko2 seperti banjir dan kebakaran<br />\r\n<span style=\"color:#0000ff\">â–ª &lsquo;There are a lot of activities to do.&rsquo; &lsquo;Such as?&rsquo;</span><br />\r\n&ldquo;Banyak kegiatan2 yg utk dilakukan.&rdquo; &ldquo;Misalnya?&rdquo;<br />\r\n<span style=\"color:#ff0000\">(<strong>b</strong>)</span> <strong>seperti</strong><br />\r\n(syn <span style=\"color:#0000ff\"><strong>like</strong></span>)<br />\r\n<span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">â–ª </span></span><span style=\"color:#0000ff\">Activities such as these are fun.</span><br />\r\nKegiatan2 seperti ini menyenangkan.<br />\r\n<span style=\"color:#ff0000\"><strong>| such as it is&nbsp;</strong>/</span><strong><span style=\"color:#ff0000\">&nbsp;they are</span><br />\r\ndigunakan utk mengatakan bahwa sst itu berkualitas rendah atau tidak cukup</strong><br />\r\n<span style=\"color:#0000ff\"><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">â–ª </span></span>Breakfast, such as it is, is served until eleven.</span><br />\r\nMakan pagi seperti itu disajikan sampai jam sebelas.</span></p>\r\n', 'Active', 'All', '2020-02-29');
+(10, 'such', '<p><span style=\"font-family:Garamond; font-size:medium\"><strong><span style=\"color:#ff0000\">| such as</span> </strong><br />\r\n<span style=\"color:#ff0000\">(<strong>a</strong>)</span> <strong>misalnya</strong><br />\r\n(syn <span style=\"color:#0000ff\"><strong>for example</strong></span>)<br />\r\n<span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">â–ª </span></span><span style=\"color:#0000ff\">risks such as flood and fire</span><br />\r\nrisiko2 seperti banjir dan kebakaran<br />\r\n<span style=\"color:#0000ff\">â–ª &lsquo;There are a lot of activities to do.&rsquo; &lsquo;Such as?&rsquo;</span><br />\r\n&ldquo;Banyak kegiatan2 yg utk dilakukan.&rdquo; &ldquo;Misalnya?&rdquo;<br />\r\n<span style=\"color:#ff0000\">(<strong>b</strong>)</span> <strong>seperti</strong><br />\r\n(syn <span style=\"color:#0000ff\"><strong>like</strong></span>)<br />\r\n<span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">â–ª </span></span><span style=\"color:#0000ff\">Activities such as these are fun.</span><br />\r\nKegiatan2 seperti ini menyenangkan.</span></p>\r\n', '<p><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff; font-size:x-large\"><strong>such</strong></span><br />\r\n/<span style=\"font-family:DictBats\">sVtS</span>/<br />\r\ndeterminer<br />\r\n<span style=\"color:#ff0000\"><strong>1</strong></span> <strong>demikian</strong><br />\r\n<span style=\"color:#0000ff\"><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\"><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\"><span style=\"font-family:Garamond; font-size:medium\"><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">â–ª </span></span></span></span></span></span></span>Such attitude is not good.</span><br />\r\nSikap yg demikian tidaklah baik.<br />\r\n<span style=\"color:#0000ff\">â–ª I&rsquo;ve never seen such a beautiful woman.</span><br />\r\nSaya belum pernah melihat wanita yg demikian cantik.<br />\r\n<span style=\"color:#000000\"><span style=\"color:#0000ff\">â–ª She was uneducated. such was our opinion.</span><br />\r\nDia tidak terpelajar. Demikianlah pendapat kami.<br />\r\n<span style=\"color:#0000ff\">â–ª What should we do in such a situation?</span><br />\r\nApa yg harus kita lakukan dl keadaan yg demikian?<br />\r\n<span style=\"color:#0000ff\">â–ª You definitely need a teacher, or some such person.</span><br />\r\nAnda pastinya membutuhkan seorg guru, atau org yg demiian.<br />\r\n<span style=\"color:#0000ff\">â–ª He said no such thing. &nbsp;</span><br />\r\nDia tidak mengatakan hal yg demikian.<br />\r\n<span style=\"color:#0000ff\">â–ª Living things need water and should be treated as such.</span><br />\r\nBenda hidup memerlukan air dan harus diperlakukan demikian.</span><br />\r\n<span style=\"color:#ff0000\"><strong>2</strong></span> <strong>begitu; sangat (digunakan utk penekanan)</strong><br />\r\n<span style=\"color:#0000ff\">I felt such a stupid person.</span><br />\r\nSaya merasa menjadi ssorg yg begitu bodoh.<br />\r\n<span style=\"color:#ff0000\"><strong>3</strong></span> <strong>(digunakan utk menunjukkan hasil dari suatu keadaan, perbuatan, dll.)</strong><br />\r\n<span style=\"color:#ff0000\">(<strong>a</strong>)</span> <span style=\"color:#0000ff\"><strong>such &hellip;that </strong></span><br />\r\n<strong>begitu/ sedemikian &hellip; sehingga</strong><br />\r\n<span style=\"color:#0000ff\"><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">â–ª </span></span>He was in such a hurry that he fell off his bicycle.</span><br />\r\nDia dl keadaan begitu ter-buru2 sehingga dia jatuh dari sep&eacute;danya.<br />\r\n<span style=\"color:#ff0000\">(<strong>b</strong>) <strong>be</strong> <strong>such that</strong>; <strong>be</strong> <strong>such as to inf</strong></span><br />\r\n<strong>sedemikian rupa sehingga</strong><br />\r\n<span style=\"color:#0000ff\"><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">â–ª </span></span>His intelligence was such that he graduated from senior high school at the age of 12.</span><br />\r\nKepintarannya dl keadaan sedemikian rupa sehingga dia lulus dari SMA di usia 12.<br />\r\n<span style=\"color:#0000ff\">â–ª His manner was&nbsp;<span style=\"font-family:Garamond; font-size:medium\">such</span> as to offed most of us.</span><br />\r\nPerilakunya sedemiian rupa sehingga membuat sebagian besar dari kami tersinggung.<br />\r\n<span style=\"color:#ff0000\">(<strong>c</strong>)</span>&nbsp;<span style=\"color:#ff0000\"><strong><span style=\"font-family:Garamond; font-size:medium\">such</span> a way</strong>/<strong>manner that;&nbsp;<span style=\"font-family:Garamond; font-size:medium\">such</span> a way</strong>/</span><strong><span style=\"color:#ff0000\">manner as to inf</span><br />\r\ndengan cara sedemikian rupa sehingga</strong><br />\r\n<span style=\"color:#0000ff\">â–ª Do it in&nbsp;<span style=\"font-family:Garamond; font-size:medium\">such</span> a way/manner that nobody will find out.</span><br />\r\nLakukanlah dengan cara yg sedemikian rupa sehingga tidak akan diketahui ol&eacute;h org lain.<br />\r\n<span style=\"color:#0000ff\">â–ª Do it in such a way/manner as to impress her.</span><br />\r\nLakukanlah dengan cara sedemikian rupa sehingga membuat dia terkesan.<br />\r\n<strong><span style=\"color:#ff0000\">â–  IDIOM </span><br />\r\n<span style=\"color:#ff0000\"><span style=\"color:#000000\"><span style=\"color:#ff0000\"><strong>| &hellip; and such </strong></span></span></span></strong><br />\r\n<span style=\"color:#ff0000\"><span style=\"color:#000000\">(</span></span><span style=\"color:#ff0000\"><span style=\"color:#000000\">lisan</span></span><span style=\"color:#ff0000\"><span style=\"color:#000000\">)</span></span><strong><span style=\"color:#ff0000\"><span style=\"color:#000000\"> dan yg sejenis<br />\r\n<span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\"><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">â–ª </span></span></span></span></span></span></strong><span style=\"color:#0000ff\">There will be french fries, fried chicken, burgers and such.</span><span style=\"color:#0000ff\"> </span><br />\r\n<strong><span style=\"color:#000000\">Akan ada kentang gor&eacute;ng, ayam gor&eacute;ng, burger, dan yg sejenisnya.</span><br />\r\n<span style=\"color:#ff0000\">| as such</span><br />\r\npersis seperti itu</strong><br />\r\n<span style=\"color:#0000ff\"><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">â–ª </span></span>There isn&rsquo;t a swimming pool as such, but they do have a small pool.</span><br />\r\nTidak ada kolam renang yg persis seperti itu, tetapi mer&eacute;ka m&eacute;mang memiliki sebuah kolam kecil.<br />\r\n<span style=\"color:#ff0000\"><strong>| such &hellip; as </strong></span>(juga <span style=\"color:#ff0000\"><strong>such as</strong></span>)<br />\r\n<strong>seperti; semacam</strong><br />\r\n<span style=\"color:#0000ff\"><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">â–ª </span></span>occupations such as drivers and teachers</span><br />\r\npekerjaan2 seperti supir2 dan guru2<br />\r\n<span style=\"color:#0000ff\">â–ª such attacks as bombings and suicides</span><br />\r\nserangan2 seperti serangan bom dan bunuh diri<br />\r\n<span style=\"color:#000000\"><span style=\"color:#ff0000\"><strong>| such &hellip; as</strong>/<strong>who</strong>/</span><strong><span style=\"color:#ff0000\">that</span> </strong><br />\r\ndigunakan utk menunjuk suatu kelompok<br />\r\n<span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">â–ª </span></span><span style=\"color:#0000ff\">Such individuals who support this point of view should be respected.</span><br />\r\nOrg2 yg mendukung pandangan ini harus dihargai.</span><br />\r\n<span style=\"color:#ff0000\"><strong>| such of sb</strong>/</span><strong><span style=\"color:#ff0000\">sth as</span> </strong><br />\r\ndigunakan utk menunjuk suatu kelompok<br />\r\n<span style=\"font-family:Garamond; font-size:medium\"><strong><span style=\"color:#ff0000\">|</span></strong></span> <span style=\"color:#ff0000\"><strong>Such of you as wish to come earlier will be welcomed.</strong></span><br />\r\nMer&eacute;ka yg ingin datang lebih awal akan disambut baik.<br />\r\n<strong><span style=\"color:#ff0000\">| to such an extent </span></strong><span style=\"color:#ff0000\">/ </span><strong><span style=\"color:#ff0000\">a degree that</span><br />\r\nsampai ke tingkat yg demikian sehingga</strong><br />\r\n<span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#000000\"><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">â–ª </span></span></span></span><span style=\"color:#0000ff\">Her health was deterioting to such a degree that she could not stand up.</span><br />\r\nKes&eacute;hatannya terus memburuk sampai ke tingkat yg sedemikian rupa di mana dia tidak bisa berdiri.<br />\r\n<span style=\"color:#ff0000\"><strong>| there is no such thing</strong>/</span><strong><span style=\"color:#ff0000\">person</span></strong><br />\r\n<strong>tidak ada hal/org seperti itu</strong><br />\r\n<span style=\"color:#0000ff\"><span style=\"font-family:Garamond; font-size:medium\"><span style=\"font-family:Garamond; font-size:medium\"><span style=\"font-family:Garamond; font-size:medium\">â–ª </span></span></span>There is no such thing as a free lunch.</span><br />\r\n<span style=\"color:#000000\">Tidak ada hal seperti makan siang gratis.</span><br />\r\n<strong><span style=\"color:#ff0000\">| such as</span> </strong><br />\r\n<span style=\"color:#ff0000\">(<strong>a</strong>)</span> <strong>misalnya</strong><br />\r\n(syn <span style=\"color:#0000ff\"><strong>for example</strong></span>)<br />\r\n<span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">â–ª </span></span><span style=\"color:#0000ff\">risks such as flood and fire</span><br />\r\nrisiko2 seperti banjir dan kebakaran<br />\r\n<span style=\"color:#0000ff\">â–ª &lsquo;There are a lot of activities to do.&rsquo; &lsquo;Such as?&rsquo;</span><br />\r\n&ldquo;Banyak kegiatan2 yg utk dilakukan.&rdquo; &ldquo;Misalnya?&rdquo;<br />\r\n<span style=\"color:#ff0000\">(<strong>b</strong>)</span> <strong>seperti</strong><br />\r\n(syn <span style=\"color:#0000ff\"><strong>like</strong></span>)<br />\r\n<span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">â–ª </span></span><span style=\"color:#0000ff\">Activities such as these are fun.</span><br />\r\nKegiatan2 seperti ini menyenangkan.<br />\r\n<span style=\"color:#ff0000\"><strong>| such as it is&nbsp;</strong>/</span><strong><span style=\"color:#ff0000\">&nbsp;they are</span><br />\r\ndigunakan utk mengatakan bahwa sst itu berkualitas rendah atau tidak cukup</strong><br />\r\n<span style=\"color:#0000ff\"><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">â–ª </span></span>Breakfast, such as it is, is served until eleven.</span><br />\r\nMakan pagi seperti itu disajikan sampai jam sebelas.</span></p>\r\n', 'Active', 'All', '2020-02-29'),
+(11, 'Speaking or This is she.', '<p><span style=\"color:#0000ff; font-family:Garamond; font-size:medium\"><span style=\"color:#000000\"><strong>Meminta berbicara dengan seseorang di telepon.</strong></span></span></p>\r\n\r\n<p><span style=\"color:#0000ff; font-family:Garamond; font-size:medium\"><span style=\"color:#ff0000\">1.</span> (UK) Hello, could I speak to Catherine?<br />\r\n<span style=\"color:#ff0000\">2.</span> (US) Hello could I speak with&nbsp; Catherine?</span></p>\r\n\r\n<p><span style=\"font-family:Garamond; font-size:medium\">Kita dapat menjawab:<br />\r\n<span style=\"color:#0000ff\">Speaking. (sedang bicara)</span></span></p>\r\n\r\n<p><span style=\"font-family:Garamond; font-size:medium\">Atau juga dalam American English:</span></p>\r\n\r\n<p><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">This is she.</span></span></p>\r\n', '<p><span style=\"color:#0000ff; font-family:Garamond; font-size:medium\"><span style=\"color:#000000\"><strong>Meminta berbicara dengan seseorang di telepon.</strong></span></span></p>\r\n\r\n<p><span style=\"color:#0000ff; font-family:Garamond; font-size:medium\"><span style=\"color:#ff0000\">1.</span> (UK) Hello, could I speak to Catherine?<br />\r\n<span style=\"color:#ff0000\">2.</span> (US) Hello could I speak with&nbsp; Catherine?</span></p>\r\n\r\n<p><span style=\"font-family:Garamond; font-size:medium\">Kita dapat menjawab:<br />\r\n<span style=\"color:#0000ff\">Speaking. (sedang bicara)</span></span></p>\r\n\r\n<p><span style=\"font-family:Garamond; font-size:medium\">Atau juga dalam American English:</span></p>\r\n\r\n<p><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">This is she.</span></span></p>\r\n', 'Active', 'All', '2020-03-29');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `site_package`
+-- Struktur dari tabel `site_package`
 --
 
 CREATE TABLE `site_package` (
@@ -222,7 +225,7 @@ CREATE TABLE `site_package` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `site_package`
+-- Dumping data untuk tabel `site_package`
 --
 
 INSERT INTO `site_package` (`pack_id`, `nama`, `keterangan`, `harga`) VALUES
@@ -231,7 +234,7 @@ INSERT INTO `site_package` (`pack_id`, `nama`, `keterangan`, `harga`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `site_package_detail`
+-- Struktur dari tabel `site_package_detail`
 --
 
 CREATE TABLE `site_package_detail` (
@@ -241,7 +244,7 @@ CREATE TABLE `site_package_detail` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `site_package_detail`
+-- Dumping data untuk tabel `site_package_detail`
 --
 
 INSERT INTO `site_package_detail` (`spd_id`, `pack_id`, `book_id`) VALUES
@@ -252,7 +255,7 @@ INSERT INTO `site_package_detail` (`spd_id`, `pack_id`, `book_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `site_sentence`
+-- Struktur dari tabel `site_sentence`
 --
 
 CREATE TABLE `site_sentence` (
@@ -262,7 +265,7 @@ CREATE TABLE `site_sentence` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `site_sentence`
+-- Dumping data untuk tabel `site_sentence`
 --
 
 INSERT INTO `site_sentence` (`sentence_id`, `sentence`, `keyword`) VALUES
@@ -275,7 +278,7 @@ INSERT INTO `site_sentence` (`sentence_id`, `sentence`, `keyword`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `site_slider`
+-- Struktur dari tabel `site_slider`
 --
 
 CREATE TABLE `site_slider` (
@@ -285,18 +288,16 @@ CREATE TABLE `site_slider` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `site_slider`
+-- Dumping data untuk tabel `site_slider`
 --
 
 INSERT INTO `site_slider` (`id_slider`, `img`, `caption`) VALUES
-(4, '629224Logo.jpg', 'E Plus, Mobile English'),
-(5, 'aLL.jpg', 'Our Books'),
 (7, 'YR.png', 'Yama Raja');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `site_wod`
+-- Struktur dari tabel `site_wod`
 --
 
 CREATE TABLE `site_wod` (
@@ -310,16 +311,17 @@ CREATE TABLE `site_wod` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `site_wod`
+-- Dumping data untuk tabel `site_wod`
 --
 
 INSERT INTO `site_wod` (`word_id`, `word`, `status`, `word_range`, `content`, `content_extend`, `date`) VALUES
-(27, 'sock', 'Active', 'All', '<p><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff; font-size:x-large\"><strong>sock</strong>&sup1;</span><br />\r\n/<span style=\"font-family:DictBats\">sQk</span>; US<span style=\"font-family:DictBats\"> sA;k</span>/<br />\r\nnoun [countable]<br />\r\n<span style=\"color:#ff0000\"><strong>1</strong></span> <strong>kaus kaki</strong><br />\r\n<span style=\"color:#0000ff\"><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">â–ª</span> </span>a pair of knee-length socks</span><br />\r\nsepasang kaus kaki setinggi lutut<br />\r\n<span style=\"color:#ff0000\"><strong>2</strong></span> (informal)<br />\r\n<strong>pukulan keras</strong><br />\r\n<span style=\"color:#0000ff\"><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">â–ª</span> </span>give sb a sock in the stomach</span><br />\r\n<span style=\"color:#000000\">memberikan pukulan keras pada perut ssorg</span><br />\r\n<strong><span style=\"color:#ff0000\">â–  IDIOM </span><br />\r\n<span style=\"color:#ff0000\">| blow</span></strong><span style=\"color:#ff0000\">/</span><strong><span style=\"color:#ff0000\">knock your sock off</span><br />\r\n<span style=\"color:#000000\">mengejutkan atau mengesankan ssorg</span></strong><br />\r\n<strong><span style=\"color:#ff0000\">| put your sock in it</span> </strong><br />\r\n(UK, informal, kuno)<br />\r\n<strong><span style=\"color:#000000\">digunakan utk menyuruh ssorg utk berhenti berbidara atau utk tidak berisik</span></strong></span></p>\r\n\r\n<p>&nbsp;</p>\r\n', '<p><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff; font-size:x-large\"><strong>sock</strong>&sup2;</span><br />\r\n/<span style=\"font-family:DictBats\">sQk</span>; US<span style=\"font-family:DictBats\"> sA;k</span>/<br />\r\nverb [+object] (informal)<br />\r\n<strong>memukul ssorg dengan keras</strong><br />\r\n<span style=\"color:#0000ff\"><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">â–ª</span> </span>She socked him in the stomach.</span><br />\r\nDia memukul perutnya dengan keras.<br />\r\n<span style=\"color:#0000ff\">â–ª (kiasan) The restaurant is socking customers with high prices.</span><br />\r\nR&eacute;storan itu mengenakan harga yg gila kepada langganannya.<br />\r\n<span style=\"color:#ff0000\"><strong>â–  IDIOM<br />\r\n| sock it to sb </strong></span><br />\r\n(informal, humor)<br />\r\n<strong>melakukan sst atau menyuruh ssorg melakukan sst dengan keras</strong><br />\r\n<strong><span style=\"color:#ff0000\">| pull your socks up</span></strong><br />\r\n&rarr; lihat <span style=\"color:#0000ff\"><strong>pull</strong>&sup1;</span><br />\r\n<strong><span style=\"color:#ff0000\">PHR v </span><br />\r\n<span style=\"color:#ff0000\">| sock sth away </span></strong>(US)<br />\r\n<strong>menabung dengan menempatkan uang di tempat yg aman</strong></span></p>\r\n', '2020-02-29');
+(27, 'sock', 'Active', 'All', '<p><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff; font-size:x-large\"><strong>sock</strong>&sup1;</span><br />\r\n/<span style=\"font-family:DictBats\">sQk</span>; US<span style=\"font-family:DictBats\"> sA;k</span>/<br />\r\nnoun [countable]<br />\r\n<span style=\"color:#ff0000\"><strong>1</strong></span> <strong>kaus kaki</strong><br />\r\n<span style=\"color:#0000ff\"><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">â–ª</span> </span>a pair of knee-length socks</span><br />\r\nsepasang kaus kaki setinggi lutut<br />\r\n<span style=\"color:#ff0000\"><strong>2</strong></span> (informal)<br />\r\n<strong>pukulan keras</strong><br />\r\n<span style=\"color:#0000ff\"><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">â–ª</span> </span>give sb a sock in the stomach</span><br />\r\n<span style=\"color:#000000\">memberikan pukulan keras pada perut ssorg</span><br />\r\n<strong><span style=\"color:#ff0000\">â–  IDIOM </span><br />\r\n<span style=\"color:#ff0000\">| blow</span></strong><span style=\"color:#ff0000\">/</span><strong><span style=\"color:#ff0000\">knock your sock off</span><br />\r\n<span style=\"color:#000000\">mengejutkan atau mengesankan ssorg</span></strong><br />\r\n<strong><span style=\"color:#ff0000\">| put your sock in it</span> </strong><br />\r\n(UK, informal, kuno)<br />\r\n<strong><span style=\"color:#000000\">digunakan utk menyuruh ssorg utk berhenti berbidara atau utk tidak berisik</span></strong></span></p>\r\n\r\n<p>&nbsp;</p>\r\n', '<p><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff; font-size:x-large\"><strong>sock</strong>&sup2;</span><br />\r\n/<span style=\"font-family:DictBats\">sQk</span>; US<span style=\"font-family:DictBats\"> sA;k</span>/<br />\r\nverb [+object] (informal)<br />\r\n<strong>memukul ssorg dengan keras</strong><br />\r\n<span style=\"color:#0000ff\"><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">â–ª</span> </span>She socked him in the stomach.</span><br />\r\nDia memukul perutnya dengan keras.<br />\r\n<span style=\"color:#0000ff\">â–ª (kiasan) The restaurant is socking customers with high prices.</span><br />\r\nR&eacute;storan itu mengenakan harga yg gila kepada langganannya.<br />\r\n<span style=\"color:#ff0000\"><strong>â–  IDIOM<br />\r\n| sock it to sb </strong></span><br />\r\n(informal, humor)<br />\r\n<strong>melakukan sst atau menyuruh ssorg melakukan sst dengan keras</strong><br />\r\n<strong><span style=\"color:#ff0000\">| pull your socks up</span></strong><br />\r\n&rarr; lihat <span style=\"color:#0000ff\"><strong>pull</strong>&sup1;</span><br />\r\n<strong><span style=\"color:#ff0000\">PHR v </span><br />\r\n<span style=\"color:#ff0000\">| sock sth away </span></strong>(US)<br />\r\n<strong>menabung dengan menempatkan uang di tempat yg aman</strong></span></p>\r\n', '2020-02-29'),
+(28, 'gradual', 'Active', 'All', '<p><span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff; font-size:x-large\"><strong>grad&middot;ual</strong></span><br />\r\n/<span style=\"font-family:DictBats\">&#39;gr&amp;dZuJl</span>/<br />\r\nadjective<br />\r\n<span style=\"color:#ff0000\"><strong>1</strong></span> <span style=\"color:#000000\"><strong>pelan2; terjadi secara perlahan</strong> </span><br />\r\n(lawan <span style=\"color:#0000ff\"><strong>sudden</strong></span>)<br />\r\n<span style=\"font-family:Garamond; font-size:medium\"><span style=\"color:#0000ff\">?</span> </span><span style=\"color:#0000ff\">a gradual change/process</span><br />\r\nperubahan/pros&eacute;s yg terjadi secara perlahan<br />\r\n<span style=\"color:#0000ff\">?</span> </span><span style=\"font-family:Garamond\"><span style=\"font-size:medium\"><span style=\"color:#0000ff\">The progress is very gradual.</span><br />\r\nKemajuan itu terjadi secara perlahan.</span> </span></p>\r\n', '', '2020-03-30');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_token_auth`
+-- Struktur dari tabel `tbl_token_auth`
 --
 
 CREATE TABLE `tbl_token_auth` (
@@ -332,7 +334,7 @@ CREATE TABLE `tbl_token_auth` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_token_auth`
+-- Dumping data untuk tabel `tbl_token_auth`
 --
 
 INSERT INTO `tbl_token_auth` (`id`, `email`, `password_hash`, `selector_hash`, `is_expired`, `expiry_date`) VALUES
@@ -371,7 +373,7 @@ INSERT INTO `tbl_token_auth` (`id`, `email`, `password_hash`, `selector_hash`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktur dari tabel `users`
 --
 
 CREATE TABLE `users` (
@@ -394,11 +396,11 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `users`
+-- Dumping data untuk tabel `users`
 --
 
 INSERT INTO `users` (`user_id`, `ssid`, `foto`, `firstname`, `lastname`, `email`, `alamat`, `kontak`, `password`, `second_password`, `is_activated`, `activation_code`, `fpassword_key`, `trial`, `is_active`, `join_on`) VALUES
-(11, 'pa1p2m7ro0msq4t79j7qlvghl6', '', 'Iqbal', 'Hasan', 'iqbalhasandc200@gmail.com', 'Jln. Tanjung Pura Nomor 5, kalideres Jakarta Barat.', '081294236473', '$2y$10$exPJhDUC3iQRM1YU5yP.P.MNH5khl9IKTEaujh2M6LhUiqWRw93NO', '$2y$10$wLXkoBQtVc5eqfPJG9jIE.BqKmodJD9TEqTRX0WfBwRYyjHIQKmWy', 0, NULL, 'FV38jKOso8xAQgsG', '', 1, '2019-12-18'),
+(11, 'dfmrem0lk4c16l14fmjc4i77cp', '', 'Iqbal', 'Hasan', 'iqbalhasandc200@gmail.com', 'Jln. Tanjung Pura Nomor 5, kalideres Jakarta Barat.', '081294236473', '$2y$10$exPJhDUC3iQRM1YU5yP.P.MNH5khl9IKTEaujh2M6LhUiqWRw93NO', '$2y$10$wLXkoBQtVc5eqfPJG9jIE.BqKmodJD9TEqTRX0WfBwRYyjHIQKmWy', 0, NULL, 'FV38jKOso8xAQgsG', '', 1, '2019-12-18'),
 (12, '', '', 'herawati', 'naya', 'nayaya204@gmail.com', '', NULL, '$2y$10$exPJhDUC3iQRM1YU5yP.P.MNH5khl9IKTEaujh2M6LhUiqWRw93NO', 'nayaya', 0, NULL, '', '', 0, '2019-12-19'),
 (13, '', '', 'Roni', 'Ahmad', 'roni_aje@gmail.com', '', NULL, '$2y$10$exPJhDUC3iQRM1YU5yP.P.MNH5khl9IKTEaujh2M6LhUiqWRw93NO', 'rona', 0, NULL, '', '', 0, '2019-12-19'),
 (14, '', '', 'Dian ', 'Indah', 'dianindah330@gmail.com', '', NULL, '$2y$10$exPJhDUC3iQRM1YU5yP.P.MNH5khl9IKTEaujh2M6LhUiqWRw93NO', 'diamond', 0, NULL, '', '', 0, '2019-12-19'),
@@ -430,7 +432,7 @@ INSERT INTO `users` (`user_id`, `ssid`, `foto`, `firstname`, `lastname`, `email`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users_book_catalog`
+-- Struktur dari tabel `users_book_catalog`
 --
 
 CREATE TABLE `users_book_catalog` (
@@ -441,7 +443,7 @@ CREATE TABLE `users_book_catalog` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `users_book_catalog`
+-- Dumping data untuk tabel `users_book_catalog`
 --
 
 INSERT INTO `users_book_catalog` (`catalog_id`, `user_id`, `book_id`, `timestamp`) VALUES
@@ -455,7 +457,7 @@ INSERT INTO `users_book_catalog` (`catalog_id`, `user_id`, `book_id`, `timestamp
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users_detail`
+-- Struktur dari tabel `users_detail`
 --
 
 CREATE TABLE `users_detail` (
@@ -467,7 +469,7 @@ CREATE TABLE `users_detail` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users_order`
+-- Struktur dari tabel `users_order`
 --
 
 CREATE TABLE `users_order` (
@@ -484,7 +486,7 @@ CREATE TABLE `users_order` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `users_order`
+-- Dumping data untuk tabel `users_order`
 --
 
 INSERT INTO `users_order` (`Order_id`, `Email`, `Phone`, `Note`, `Date`, `pack_id`, `user_id`, `Bank`, `Total`, `Status`) VALUES
@@ -511,7 +513,7 @@ INSERT INTO `users_order` (`Order_id`, `Email`, `Phone`, `Note`, `Date`, `pack_i
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user_payment`
+-- Struktur dari tabel `user_payment`
 --
 
 CREATE TABLE `user_payment` (
@@ -529,7 +531,7 @@ CREATE TABLE `user_payment` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `user_payment`
+-- Dumping data untuk tabel `user_payment`
 --
 
 INSERT INTO `user_payment` (`payment_id`, `order_id`, `nama`, `email`, `bank`, `tanggal_transfer`, `jumlah`, `pesan`, `date`, `status`, `dihapus`) VALUES
@@ -544,7 +546,7 @@ INSERT INTO `user_payment` (`payment_id`, `order_id`, `nama`, `email`, `bank`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user_section_admin`
+-- Struktur dari tabel `user_section_admin`
 --
 
 CREATE TABLE `user_section_admin` (
@@ -563,7 +565,7 @@ CREATE TABLE `user_section_admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `user_section_admin`
+-- Dumping data untuk tabel `user_section_admin`
 --
 
 INSERT INTO `user_section_admin` (`admin_id`, `admin_username`, `admin_password`, `nama`, `role`, `gender`, `usia`, `email`, `kontak`, `tanggal bergabung`, `foto`, `is_active`) VALUES
@@ -576,112 +578,573 @@ INSERT INTO `user_section_admin` (`admin_id`, `admin_username`, `admin_password`
 --
 
 --
--- Indexes for table `book`
+-- Indeks untuk tabel `book`
 --
 ALTER TABLE `book`
   ADD PRIMARY KEY (`book_id`);
 
 --
--- Indexes for table `book_chapter`
+-- Indeks untuk tabel `book_chapter`
 --
 ALTER TABLE `book_chapter`
   ADD PRIMARY KEY (`chapter_id`);
 
 --
--- Indexes for table `book_price`
+-- Indeks untuk tabel `book_price`
 --
 ALTER TABLE `book_price`
   ADD KEY `book_price_ibfk_1` (`book_id`);
 
 --
--- Indexes for table `book_trial`
+-- Indeks untuk tabel `book_trial`
 --
 ALTER TABLE `book_trial`
   ADD PRIMARY KEY (`item_id`);
 
 --
--- Indexes for table `site_article`
+-- Indeks untuk tabel `site_article`
 --
 ALTER TABLE `site_article`
   ADD PRIMARY KEY (`article_id`);
 
 --
--- Indexes for table `site_info`
+-- Indeks untuk tabel `site_info`
 --
 ALTER TABLE `site_info`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `site_lead`
+-- Indeks untuk tabel `site_lead`
 --
 ALTER TABLE `site_lead`
   ADD PRIMARY KEY (`id_lead`);
 
 --
--- Indexes for table `site_lesson`
+-- Indeks untuk tabel `site_lesson`
 --
 ALTER TABLE `site_lesson`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `site_package`
+-- Indeks untuk tabel `site_package`
 --
 ALTER TABLE `site_package`
   ADD PRIMARY KEY (`pack_id`);
 
 --
--- Indexes for table `site_package_detail`
+-- Indeks untuk tabel `site_package_detail`
 --
 ALTER TABLE `site_package_detail`
   ADD PRIMARY KEY (`spd_id`),
   ADD KEY `pack_id` (`pack_id`);
 
 --
--- Indexes for table `site_sentence`
+-- Indeks untuk tabel `site_sentence`
 --
 ALTER TABLE `site_sentence`
   ADD PRIMARY KEY (`sentence_id`);
 
 --
--- Indexes for table `site_slider`
+-- Indeks untuk tabel `site_slider`
 --
 ALTER TABLE `site_slider`
   ADD PRIMARY KEY (`id_slider`);
 
 --
--- Indexes for table `site_wod`
+-- Indeks untuk tabel `site_wod`
 --
 ALTER TABLE `site_wod`
   ADD PRIMARY KEY (`word_id`);
 
 --
--- Indexes for table `tbl_token_auth`
+-- Indeks untuk tabel `tbl_token_auth`
 --
 ALTER TABLE `tbl_token_auth`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
+-- Indeks untuk tabel `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`user_id`);
 
 --
--- Indexes for table `users_book_catalog`
+-- Indeks untuk tabel `users_book_catalog`
 --
 ALTER TABLE `users_book_catalog`
   ADD PRIMARY KEY (`catalog_id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `book_chapter`
+-- AUTO_INCREMENT untuk tabel `book_chapter`
 --
 ALTER TABLE `book_chapter`
   MODIFY `chapter_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT untuk tabel `site_lesson`
+--
+ALTER TABLE `site_lesson`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT untuk tabel `site_wod`
+--
+ALTER TABLE `site_wod`
+  MODIFY `word_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+--
+-- Database: `phpmyadmin`
+--
+CREATE DATABASE IF NOT EXISTS `phpmyadmin` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
+USE `phpmyadmin`;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pma__bookmark`
+--
+
+CREATE TABLE `pma__bookmark` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `dbase` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `user` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `label` varchar(255) CHARACTER SET utf8 NOT NULL DEFAULT '',
+  `query` text COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Bookmarks';
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pma__central_columns`
+--
+
+CREATE TABLE `pma__central_columns` (
+  `db_name` varchar(64) COLLATE utf8_bin NOT NULL,
+  `col_name` varchar(64) COLLATE utf8_bin NOT NULL,
+  `col_type` varchar(64) COLLATE utf8_bin NOT NULL,
+  `col_length` text COLLATE utf8_bin DEFAULT NULL,
+  `col_collation` varchar(64) COLLATE utf8_bin NOT NULL,
+  `col_isNull` tinyint(1) NOT NULL,
+  `col_extra` varchar(255) COLLATE utf8_bin DEFAULT '',
+  `col_default` text COLLATE utf8_bin DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Central list of columns';
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pma__column_info`
+--
+
+CREATE TABLE `pma__column_info` (
+  `id` int(5) UNSIGNED NOT NULL,
+  `db_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `table_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `column_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `comment` varchar(255) CHARACTER SET utf8 NOT NULL DEFAULT '',
+  `mimetype` varchar(255) CHARACTER SET utf8 NOT NULL DEFAULT '',
+  `transformation` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `transformation_options` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `input_transformation` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `input_transformation_options` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Column information for phpMyAdmin';
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pma__designer_settings`
+--
+
+CREATE TABLE `pma__designer_settings` (
+  `username` varchar(64) COLLATE utf8_bin NOT NULL,
+  `settings_data` text COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Settings related to Designer';
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pma__export_templates`
+--
+
+CREATE TABLE `pma__export_templates` (
+  `id` int(5) UNSIGNED NOT NULL,
+  `username` varchar(64) COLLATE utf8_bin NOT NULL,
+  `export_type` varchar(10) COLLATE utf8_bin NOT NULL,
+  `template_name` varchar(64) COLLATE utf8_bin NOT NULL,
+  `template_data` text COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Saved export templates';
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pma__favorite`
+--
+
+CREATE TABLE `pma__favorite` (
+  `username` varchar(64) COLLATE utf8_bin NOT NULL,
+  `tables` text COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Favorite tables';
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pma__history`
+--
+
+CREATE TABLE `pma__history` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `username` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `db` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `table` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `timevalue` timestamp NOT NULL DEFAULT current_timestamp(),
+  `sqlquery` text COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='SQL history for phpMyAdmin';
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pma__navigationhiding`
+--
+
+CREATE TABLE `pma__navigationhiding` (
+  `username` varchar(64) COLLATE utf8_bin NOT NULL,
+  `item_name` varchar(64) COLLATE utf8_bin NOT NULL,
+  `item_type` varchar(64) COLLATE utf8_bin NOT NULL,
+  `db_name` varchar(64) COLLATE utf8_bin NOT NULL,
+  `table_name` varchar(64) COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Hidden items of navigation tree';
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pma__pdf_pages`
+--
+
+CREATE TABLE `pma__pdf_pages` (
+  `db_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `page_nr` int(10) UNSIGNED NOT NULL,
+  `page_descr` varchar(50) CHARACTER SET utf8 NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='PDF relation pages for phpMyAdmin';
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pma__recent`
+--
+
+CREATE TABLE `pma__recent` (
+  `username` varchar(64) COLLATE utf8_bin NOT NULL,
+  `tables` text COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Recently accessed tables';
+
+--
+-- Dumping data untuk tabel `pma__recent`
+--
+
+INSERT INTO `pma__recent` (`username`, `tables`) VALUES
+('root', '[{\"db\":\"mobile_english_ebook\",\"table\":\"site_wod\"},{\"db\":\"mobile_english_ebook\",\"table\":\"site_lesson\"}]');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pma__relation`
+--
+
+CREATE TABLE `pma__relation` (
+  `master_db` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `master_table` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `master_field` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `foreign_db` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `foreign_table` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `foreign_field` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Relation table';
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pma__savedsearches`
+--
+
+CREATE TABLE `pma__savedsearches` (
+  `id` int(5) UNSIGNED NOT NULL,
+  `username` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `db_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `search_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `search_data` text COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Saved searches';
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pma__table_coords`
+--
+
+CREATE TABLE `pma__table_coords` (
+  `db_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `table_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `pdf_page_number` int(11) NOT NULL DEFAULT 0,
+  `x` float UNSIGNED NOT NULL DEFAULT 0,
+  `y` float UNSIGNED NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Table coordinates for phpMyAdmin PDF output';
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pma__table_info`
+--
+
+CREATE TABLE `pma__table_info` (
+  `db_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `table_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `display_field` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Table information for phpMyAdmin';
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pma__table_uiprefs`
+--
+
+CREATE TABLE `pma__table_uiprefs` (
+  `username` varchar(64) COLLATE utf8_bin NOT NULL,
+  `db_name` varchar(64) COLLATE utf8_bin NOT NULL,
+  `table_name` varchar(64) COLLATE utf8_bin NOT NULL,
+  `prefs` text COLLATE utf8_bin NOT NULL,
+  `last_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Tables'' UI preferences';
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pma__tracking`
+--
+
+CREATE TABLE `pma__tracking` (
+  `db_name` varchar(64) COLLATE utf8_bin NOT NULL,
+  `table_name` varchar(64) COLLATE utf8_bin NOT NULL,
+  `version` int(10) UNSIGNED NOT NULL,
+  `date_created` datetime NOT NULL,
+  `date_updated` datetime NOT NULL,
+  `schema_snapshot` text COLLATE utf8_bin NOT NULL,
+  `schema_sql` text COLLATE utf8_bin DEFAULT NULL,
+  `data_sql` longtext COLLATE utf8_bin DEFAULT NULL,
+  `tracking` set('UPDATE','REPLACE','INSERT','DELETE','TRUNCATE','CREATE DATABASE','ALTER DATABASE','DROP DATABASE','CREATE TABLE','ALTER TABLE','RENAME TABLE','DROP TABLE','CREATE INDEX','DROP INDEX','CREATE VIEW','ALTER VIEW','DROP VIEW') COLLATE utf8_bin DEFAULT NULL,
+  `tracking_active` int(1) UNSIGNED NOT NULL DEFAULT 1
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Database changes tracking for phpMyAdmin';
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pma__userconfig`
+--
+
+CREATE TABLE `pma__userconfig` (
+  `username` varchar(64) COLLATE utf8_bin NOT NULL,
+  `timevalue` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `config_data` text COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='User preferences storage for phpMyAdmin';
+
+--
+-- Dumping data untuk tabel `pma__userconfig`
+--
+
+INSERT INTO `pma__userconfig` (`username`, `timevalue`, `config_data`) VALUES
+('root', '2020-03-30 08:05:24', '{\"Console\\/Mode\":\"collapse\",\"lang\":\"id\"}');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pma__usergroups`
+--
+
+CREATE TABLE `pma__usergroups` (
+  `usergroup` varchar(64) COLLATE utf8_bin NOT NULL,
+  `tab` varchar(64) COLLATE utf8_bin NOT NULL,
+  `allowed` enum('Y','N') COLLATE utf8_bin NOT NULL DEFAULT 'N'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='User groups with configured menu items';
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pma__users`
+--
+
+CREATE TABLE `pma__users` (
+  `username` varchar(64) COLLATE utf8_bin NOT NULL,
+  `usergroup` varchar(64) COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Users and their assignments to user groups';
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indeks untuk tabel `pma__bookmark`
+--
+ALTER TABLE `pma__bookmark`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `pma__central_columns`
+--
+ALTER TABLE `pma__central_columns`
+  ADD PRIMARY KEY (`db_name`,`col_name`);
+
+--
+-- Indeks untuk tabel `pma__column_info`
+--
+ALTER TABLE `pma__column_info`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `db_name` (`db_name`,`table_name`,`column_name`);
+
+--
+-- Indeks untuk tabel `pma__designer_settings`
+--
+ALTER TABLE `pma__designer_settings`
+  ADD PRIMARY KEY (`username`);
+
+--
+-- Indeks untuk tabel `pma__export_templates`
+--
+ALTER TABLE `pma__export_templates`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `u_user_type_template` (`username`,`export_type`,`template_name`);
+
+--
+-- Indeks untuk tabel `pma__favorite`
+--
+ALTER TABLE `pma__favorite`
+  ADD PRIMARY KEY (`username`);
+
+--
+-- Indeks untuk tabel `pma__history`
+--
+ALTER TABLE `pma__history`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `username` (`username`,`db`,`table`,`timevalue`);
+
+--
+-- Indeks untuk tabel `pma__navigationhiding`
+--
+ALTER TABLE `pma__navigationhiding`
+  ADD PRIMARY KEY (`username`,`item_name`,`item_type`,`db_name`,`table_name`);
+
+--
+-- Indeks untuk tabel `pma__pdf_pages`
+--
+ALTER TABLE `pma__pdf_pages`
+  ADD PRIMARY KEY (`page_nr`),
+  ADD KEY `db_name` (`db_name`);
+
+--
+-- Indeks untuk tabel `pma__recent`
+--
+ALTER TABLE `pma__recent`
+  ADD PRIMARY KEY (`username`);
+
+--
+-- Indeks untuk tabel `pma__relation`
+--
+ALTER TABLE `pma__relation`
+  ADD PRIMARY KEY (`master_db`,`master_table`,`master_field`),
+  ADD KEY `foreign_field` (`foreign_db`,`foreign_table`);
+
+--
+-- Indeks untuk tabel `pma__savedsearches`
+--
+ALTER TABLE `pma__savedsearches`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `u_savedsearches_username_dbname` (`username`,`db_name`,`search_name`);
+
+--
+-- Indeks untuk tabel `pma__table_coords`
+--
+ALTER TABLE `pma__table_coords`
+  ADD PRIMARY KEY (`db_name`,`table_name`,`pdf_page_number`);
+
+--
+-- Indeks untuk tabel `pma__table_info`
+--
+ALTER TABLE `pma__table_info`
+  ADD PRIMARY KEY (`db_name`,`table_name`);
+
+--
+-- Indeks untuk tabel `pma__table_uiprefs`
+--
+ALTER TABLE `pma__table_uiprefs`
+  ADD PRIMARY KEY (`username`,`db_name`,`table_name`);
+
+--
+-- Indeks untuk tabel `pma__tracking`
+--
+ALTER TABLE `pma__tracking`
+  ADD PRIMARY KEY (`db_name`,`table_name`,`version`);
+
+--
+-- Indeks untuk tabel `pma__userconfig`
+--
+ALTER TABLE `pma__userconfig`
+  ADD PRIMARY KEY (`username`);
+
+--
+-- Indeks untuk tabel `pma__usergroups`
+--
+ALTER TABLE `pma__usergroups`
+  ADD PRIMARY KEY (`usergroup`,`tab`,`allowed`);
+
+--
+-- Indeks untuk tabel `pma__users`
+--
+ALTER TABLE `pma__users`
+  ADD PRIMARY KEY (`username`,`usergroup`);
+
+--
+-- AUTO_INCREMENT untuk tabel yang dibuang
+--
+
+--
+-- AUTO_INCREMENT untuk tabel `pma__bookmark`
+--
+ALTER TABLE `pma__bookmark`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `pma__column_info`
+--
+ALTER TABLE `pma__column_info`
+  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `pma__export_templates`
+--
+ALTER TABLE `pma__export_templates`
+  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `pma__history`
+--
+ALTER TABLE `pma__history`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `pma__pdf_pages`
+--
+ALTER TABLE `pma__pdf_pages`
+  MODIFY `page_nr` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `pma__savedsearches`
+--
+ALTER TABLE `pma__savedsearches`
+  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT;
+--
+-- Database: `test`
+--
+CREATE DATABASE IF NOT EXISTS `test` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `test`;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
