@@ -347,11 +347,12 @@
 	#Banner {
 		position: relative;
 		width: 100%;
-		height: 100vh;
-		background-image: url("../../background/background.jpg");
+		height: 600px;
+		background-image: url("../../background/glass_me.jpg");
 		background-attachment: fixed;
 		background-repeat: no-repeat;
-		background-size: 100%;
+		background-size: 100% 80%;
+		background-position: 0 -40px;
 		opacity: 1;
 	}
 	@media (max-width: 892px){
@@ -372,6 +373,7 @@
 		display: flex;
 		justify-content: center;
 		padding: 20px;
+		height: 120px;
 		border-radius: 4px;
 		position: relative;
 		overflow: hidden;
@@ -429,15 +431,15 @@
 	#Main header { 
 		background-color: transparent; 
 		box-shadow: 0 0 5px -3px transparent;
+		padding: 30px 50px;
 	}
 	#Header {
 		display: flex;
+		height: 60px;
 		position: relative;
-		padding: 30px 50px;
-		align-items: center;
+		padding: 0px 50px 0px 50px;
 		justify-content: space-between;
 		background-color: white;
-		box-shadow: 0 0 5px -3px rgba(0,0,0,.6);
 	}
 	@media (max-width: 892px){
 		#Main header {
@@ -619,13 +621,16 @@
 	}
 	#Bannertext {
 		width: 100%;
-		height: 450px;
+		height: 500px;
 		padding-bottom: 100px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		text-align: center;
+	}
+	#Bannertext h3 {
+		display: none;
 	}
 	@media (max-width: 892px){
 		#Bannertext { height: 230px; }
@@ -2029,7 +2034,7 @@
 	.content-wrapper {
 		width: 100%;
 		display: flex;
-		padding: 10%;
+		padding: 7% 10% 3% 10%;
 		position: relative;
 		background-color: #F1F5F8;
 		justify-content: space-around;
@@ -2038,7 +2043,7 @@
 		width: 336px;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		align-items: flex-start;
 	}
 	.left-side .book-cover {
 		width: 80%;
@@ -2053,7 +2058,7 @@
 	}
 	.left-side .chapter-list {
 		width: 80%;
-		padding-top: 50px;
+		margin-top: 50px;
 	}
 	.left-side .chapter-list ul li {
 		overflow: hidden;
@@ -2072,7 +2077,7 @@
 	}
 	.content-wrapper .right-side {
 		width: 730px;
-		overflow: hidden;
+		
 		flex-grow: 1;
 		display: flex;
 		border-radius: 3px;
@@ -2082,8 +2087,9 @@
 	.content-wrapper .right-side .next-btn {
 		width: 100%;
 		font-size: 15px;
-		padding: 0 45px;
-		margin-bottom: 40px;
+		border-radius: 3px;
+		padding: 10px;
+		background-color: white;
 	}
 	.content-wrapper .right-side .next-btn a {
 		background-color: orange;
@@ -2241,6 +2247,23 @@
 	#book_chapter .chapter_list {
 		margin-right: 10px;
 	}
+	.read_footer {
+		padding: 17px 10% 40px 10%;
+		display: flex;
+		align-items: center;
+		color: rgba(0,0,0,.6);
+		background-color: #F1F5F8; 
+	}
+	.read_footer .logo {
+		width: 65px;
+		height: 40px;
+		margin-right: 30px;
+	}
+	.read_footer .logo img {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
 /* End Read */
 
 /* Success confirm */
@@ -2324,7 +2347,6 @@
 
 	#Main .footer-wrapper {
 		padding: 70px 13% 50px 13%;
-		box-shadow: 3px 3px 10px -5px rgba(0,0,0,.6);
 	}
 	.footer-wrapper {
 		color: black;
@@ -3119,6 +3141,9 @@ html, body {height: 100%;}
 		align-items: center;
 		justify-content: center;
 		border-top: 2px #333;
+		border-radius: 3px!important;
+		margin-top: 10px;
+		margin-bottom: 20px;
 	}
 	.dataTables_filter label {
 		margin-bottom: 0;
@@ -3138,14 +3163,17 @@ html, body {height: 100%;}
 	}
 	#table_id td:nth-child(1) {
 		text-align: center;
+		font-size: .8rem;
 	}
 	#table_id td:nth-child(2) {
-		padding: 5px 10px;
-		border-left: 1px solid lime;
+		padding: 0;
 	}
 	#table_id td:nth-child(2) a {
 		font-size: .8rem;
 		line-height: 1.2;
+		color: black;
+		font-weight: 500;
+		margin-bottom: 5px;
 	}
 	#table_id td:nth-child(2) a:hover {
 		color: orangered;
@@ -3153,11 +3181,13 @@ html, body {height: 100%;}
 	.table_of_content {
 		width: 100%;
 		height: auto;
-		padding: 10px 20px 20px 20px;
-		background-color: white;
 	}
 	.dataTables_wrapper table {
 		width: 100%;
+	}
+	.dataTables_wrapper table thead tr {
+		text-align: left;
+		padding-top: 10px;
 	}
 /* Data table */
 

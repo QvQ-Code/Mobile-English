@@ -16,13 +16,14 @@
 }
 
 .ck-content {
-    width: 786px;
+    width: 692px;
     background-color: white;
-    padding: 30px 100px;
+    padding: 30px 60px;
     overflow: hidden;
     line-height: 1.2;
     position: relative;
     margin-bottom: 40px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.12);
 }
 @media (max-width: 892px) {
     .ck-content {

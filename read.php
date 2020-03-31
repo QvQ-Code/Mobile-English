@@ -25,9 +25,9 @@ $chap_ref = $_GET['chap_ref'];
 ?>
 <body>
 <div class="read-container">
-
-<div class="blank_space"></div>
-
+<?php  
+	include 'header.php';
+?>
 <div class="content-wrapper" id="back_to_top">
 
 	<button class="left_nav_button" id="left_nav_button" onclick="left_nav_open()">
@@ -61,18 +61,18 @@ $chap_ref = $_GET['chap_ref'];
 
 			?>
 
-				<table id="table_id" class="display" style="background-color: white; padding: 20px 0; border-bottom: 20px solid white;">
+				<table id="table_id" class="display">
 					<h5 class="table_of_content">Table of Contents</h5>
 				    <thead>
 				        <tr>
-				        	<th>#</th>
+				        	<th></th>
 				            <th>Chapter List</th>
 				        </tr>
 				    </thead>
 				    <tbody style="padding-bottom: 20px;">
 				    <?php while ($row = $query2->fetch_assoc()) { ?>
 				        <tr>
-				        <td><?php echo $a++;?></td>
+				        <td><?php echo $a++;?>.</td>
 				        <td>
 				        	<a href="read.php?book_ref=<?php echo $book_id;?>&chap_ref=<?php echo $row['chapter'];?>">
 								<?php echo $row['heading'];?>
@@ -118,19 +118,8 @@ $chap_ref = $_GET['chap_ref'];
 
 		?>
 
-		<!-- div class="next-btn prev-btn">
-			<?php if($chap_ref !== '1' && $data_object !== NULL) { ?>
-				<a style="float: left;" href="read.php?book_ref=<?php echo $data_object["book_id"];?>&chap_ref=<?php echo $p;?>">Prev Chapter</a>
-			<?php } ?>
-
-			<?php if ($data_object !== NULL) { ?>
-				<a style="float: right" href="read.php?book_ref=<?php echo $data_object["book_id"];?>&chap_ref=<?php echo $n;?>">Next Chapter</a>
-			<?php } ?>				
-		</div -->
-		<!-- End .next-btn prev-btn-->
-
 		<div id="book_chapter">
-			<a>Chapters &#9661;</a>
+			<a>Chapters <?php echo $data_object["chapter"]; ?></a>
 			<div class="chapter_list">
 				
 			</div>
@@ -175,8 +164,18 @@ $chap_ref = $_GET['chap_ref'];
 		<?php			
 		}
 		?>
-
 		<!-- End .content -->
+
+		<div class="next-btn prev-btn">
+			<?php if($chap_ref !== '1' && $data_object !== NULL) { ?>
+				<a style="float: left;" href="read.php?book_ref=<?php echo $data_object["book_id"];?>&chap_ref=<?php echo $p;?>">Prev Chapter</a>
+			<?php } ?>
+
+			<?php if ($data_object !== NULL) { ?>
+				<a style="float: right" href="read.php?book_ref=<?php echo $data_object["book_id"];?>&chap_ref=<?php echo $n;?>">Next Chapter</a>
+			<?php } ?>				
+		</div>
+		<!-- End .next-btn prev-btn-->
 	</div>
 	<!-- End .right-side -->
 
@@ -190,6 +189,16 @@ $chap_ref = $_GET['chap_ref'];
 
 </div>
 <!-- End content-wrapper -->
+
+<footer class="read_footer">
+	<div class="logo">
+		<img src="assets/images/new_logo.png">
+	</div>
+	<div>
+		<strong>About this site</strong>
+		<p style="font-size: 13px;"> suggestions, and comments are welcome email to eplus_99@yahoo.co.id</p>
+	</div>
+</footer>
 
 </div>	
 <!-- End .read-container -->
