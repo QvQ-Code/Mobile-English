@@ -148,7 +148,7 @@ $chap_ref = $_GET['chap_ref'];
 
 		while ($row = $query3->fetch_assoc()) {
 		?>
-			<div  class="ck-content" onmousedown="return false">
+			<div id="#page<?php echo $row["page"];?>" class="ck-content" onmousedown="return false">
 				<?php 
 					if ($row !== NULL) {
 						echo $row['content']; 
@@ -179,6 +179,29 @@ $chap_ref = $_GET['chap_ref'];
 	</div>
 	<!-- End .right-side -->
 
+	<?php 
+		$sql = "
+				SELECT book.book_id, book_chapter.* 
+				FROM book 
+				INNER JOIN book_chapter 
+				ON book.book_id = book_chapter.book_id 
+				WHERE book.book_id=$book_id 
+				AND book_chapter.chapter=$chap_ref ORDER BY page ASC";
+
+		$query3 = $db->query($sql);
+		?>
+		<div class="page_shortcut">
+			<strong>Go to</strong>
+			<br><br>
+		<?php
+		while ($row = $query3->fetch_assoc()) {
+		?>
+			<a href="#page<?php echo $row["page"]; ?>">Page <?php echo $row["page"]; ?></a>
+		<?php			
+		}
+		?>
+		</div>
+	
 	<div style="display: none;" id="BackToTop">
 		<a href="#Header">
 			<svg style="width:24px;height:24px" viewBox="0 0 24 24">
