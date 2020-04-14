@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 30 Mar 2020 pada 10.05
+-- Waktu pembuatan: 11 Apr 2020 pada 01.39
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.4.3
 
@@ -21,8 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `mobile_english_ebook`
 --
-CREATE DATABASE IF NOT EXISTS `mobile_english_ebook` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `mobile_english_ebook`;
 
 -- --------------------------------------------------------
 
@@ -45,8 +43,7 @@ CREATE TABLE `book` (
 
 INSERT INTO `book` (`book_id`, `book_num`, `cover_img`, `name`, `harga`, `sinop`) VALUES
 (1, 0, 'cover grammar 4th.jpg', 'English Grammar And How To Use It 4th edition', '150000', '<p><strong><span style=\"font-size:small\">Buku ini diperuntukkan bagi siswa tingkat elementary, intermediate serta advanced</span> </strong></p>\r\n\r\n<ul>\r\n	<li><span style=\"font-size:small\">Memuat semua pengetahuan grammar yang diperlukan bagi semua siswa pembelajar bahasa Inggris </span></li>\r\n	<li><span style=\"font-size:small\">Memberikan tuntunan bagaimana memecahkan persoalan tata bahasa Inggris secara mandiri&nbsp;</span></li>\r\n	<li><span style=\"font-size:small\">Topik disusun berdasarkan kadar kesulitan dan tingkat prioritas yang harus dipelajari&nbsp;</span></li>\r\n	<li><span style=\"font-size:small\">Latihan di akhir setiap unit yang akan mengasah dan mengevaluasi pengetahuan Anda&nbsp;</span></li>\r\n	<li><span style=\"font-size:small\">Kunci jawaban diberikan di halaman belakang buku&nbsp;</span></li>\r\n	<li><span style=\"font-size:small\">Penjelasan dalam bahasa Indonesia sehingga siswa dapat memahami setiap topik dengan lebih baik&nbsp;</span></li>\r\n	<li><span style=\"font-size:small\">Sebagai textbook mahasiswa jurusan bahasa Inggris dan yang ingin memperdalam bahasa Inggris&nbsp;</span></li>\r\n	<li><span style=\"font-size:small\">Dapat digunakan untuk belajar mandiri bagi semua siswa dewasa.</span></li>\r\n</ul>\r\n\r\n<p>&nbsp;</p>\r\n'),
-(2, 0, 'cover Workbook1.jpg', 'Workbook 1', '50000', ''),
-(3, 0, 'cover Workbook2.jpg', 'Workbook 3', '50000', '');
+(2, 0, 'Cover.jpg', 'The Handbook Of How to Say It', '50000', '<p>Naturally</p>\r\n');
 
 -- --------------------------------------------------------
 
@@ -68,12 +65,17 @@ CREATE TABLE `book_chapter` (
 --
 
 INSERT INTO `book_chapter` (`chapter_id`, `book_id`, `chapter`, `page`, `heading`, `content`) VALUES
-(2, 1, 1, 0, 'BE: AM, IS, ARE', '<p><strong>A.&nbsp;&nbsp; &nbsp;KATA, FRASA, KALIMAT</strong>&nbsp;<br />\r\n&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<p>(1) &nbsp;&nbsp; &nbsp;<strong>Kata (word)</strong> adalah sekumpulan huruf yang mengandung suatu arti.<br />\r\nContoh:&nbsp;<br />\r\n<strong>high, tall, house, room, books</strong></p>\r\n\r\n<hr />\r\n<p>(2)&nbsp;&nbsp; &nbsp;<strong>Frasa (phrase)</strong> adalah satu atau sekelompok kata yang mengandung arti tetapi bukan kalimat. Jadi, kata sudah pasti adalah frasa, tetapi frasa belum tentu adalah kata.<br />\r\nContoh:&nbsp;<br />\r\n<strong>a high building, in the room, the big house, a pen, shoes, John</strong></p>\r\n\r\n<hr />\r\n<p>(3) &nbsp;&nbsp; &nbsp;Kalimat (sentence) adalah sekelompok kata yang mempunyai subjek, predikat dan dapat berdiri sendiri.<br />\r\nContoh:&nbsp;<br />\r\n(a)&nbsp;&nbsp; &nbsp;<strong>I studied the history of Indonesia.</strong><br />\r\n(b)&nbsp;&nbsp; &nbsp;<strong>He likes swimming. &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;</strong></p>\r\n</div>\r\n\r\n<p><br />\r\n<strong>B.&nbsp;&nbsp; &nbsp;KONSEP DASAR KALIMAT BAHASA INGGRIS</strong><br />\r\n&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<p><strong>Kalimat bahasa Inggris harus mempunyai kata kerja utama.</strong> Tanpa kata kerja utama, kalimat bahasa Inggris adalah kalimat yang salah seperti dalam kalimat berikut:<br />\r\n(1)&nbsp;&nbsp; &nbsp;<s><strong>He smart.</strong></s> (Dia pintar.)<br />\r\n(2)&nbsp;&nbsp; &nbsp;<s><strong>He a student.</strong></s> (Dia seorang siswa.)<br />\r\n(3)&nbsp;&nbsp; &nbsp;<s><strong>He from Indonesia.</strong></s> (Dia dari Indonesia.)</p>\r\n\r\n<hr />\r\n<p>Mengapa kalimat di atas salah?<br />\r\nKalimat di atas salah karena kalimat di atas tidak mempunyai kata kerja utama. Kalimat di atas seharusnya adalah:<br />\r\n(1)&nbsp;&nbsp; &nbsp;He <strong>is</strong> smart.<br />\r\n(2)&nbsp;&nbsp; &nbsp;He <strong>is</strong> a student.<br />\r\n(3)&nbsp;&nbsp; &nbsp;He<strong> is</strong> from Indonesia.</p>\r\n</div>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<p>Kita menambahkan<strong> is</strong> pada kalimat di atas. <strong>Mengapa?</strong> Karena<strong> is</strong> adalah kata <strong>kerja bantu (helping verb)</strong>, yaitu kata kerja yang membantu kalimat bahasa Inggris yang tidak memiliki kata kerja utama.</p>\r\n</div>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<p>Perhatikan kata ganti berikut yang menggunakan kata kerja bantu &nbsp;<strong>be (am, is, are).</strong><br />\r\n(1) &nbsp;I <strong>am</strong> smart.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (2) &nbsp;He <strong>is</strong> smart.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(5) &nbsp;You <strong>are</strong> smart.<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (3) &nbsp;She <strong>is</strong> smart.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (6) &nbsp;We <strong>are</strong> smart.&nbsp;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (4) &nbsp;It <strong>is</strong> smart.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (7) &nbsp;They <strong>are</strong> smart.&nbsp;&nbsp;</p>\r\n</div>\r\n'),
-(3, 1, 2, 0, 'THE SIMPLE PRESENT TENSE, ADVERBS OF FREQUENCY', '<h2 style=\"text-align:justify\"><strong>A. KALIMAT YANG MEMPUNYAI KATA KERJA UTAMA</strong></h2>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<p style=\"text-align:justify\">Setelah kita memperlajari kalimat bahasa Inggris yang tidak mempunyai kata kerja utama. marilah kita pelajari kalimat bahasa Inggris yang memiliki kata kerja utama.Untuk kalimat bahasa inggris yang mempunyai kata kerja utama, kita langsung saja menggunakan kata kerja tersebut tanpa menggunakan kata kerja bantu.</p>\r\n</div>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\">Contoh:</p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<div style=\"background:#ffffff; border:3px solid #cccccc; padding:5px 10px\">\r\n<p style=\"text-align:justify\"><strong>I work in the morning.</strong></p>\r\n\r\n<p style=\"text-align:justify\">Karena kata kerja <strong>work </strong>adalah kata kerja utama, kita tidak menggunakan kata kerja bantu <strong>am </strong>untum membuat kalimat tersebut. Jika menggunakan <strong>am </strong>untuk membuat kalimat, kalimatnya menjadi <strong><s>I am work in the morning</s></strong>. Didalam kalimat ini terdapat dua kata kerja, yaitu kata kerja bantu <strong>am </strong>dan kata kerja utama <strong>work</strong>. Hal ini tidak diperbolehkan. Sebelumnya, tentu kita harus tau apa itu kata kerja. <strong>kata kerja </strong>adalah kata yang menunjukan suatu aksi, kejadian atau keadaan. Contoh kata kerja adalah: <strong>dance, look, play, read, study, write.</strong>&nbsp;</p>\r\n</div>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Cara membentuk <strong>the simple present tense</strong>:</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<table cellpadding=\"1\" cellspacing=\"1\" style=\"width:100%\">\r\n	<tbody>\r\n		<tr>\r\n			<td><strong>rumus:</strong></td>\r\n			<td><strong>subject (I/ we/ you/ they) + infinitive </strong>atau</td>\r\n			<td>&nbsp;</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&nbsp;</td>\r\n			<td><strong>subject (he/ she/ it) + infinitive + s</strong></td>\r\n			<td>&nbsp;</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<hr />\r\n<p>&nbsp;</p>\r\n</div>\r\n'),
+(2, 1, 1, 1, 'BE: AM, IS, ARE', '<p style=\"text-align:justify\"><strong>A.&nbsp;&nbsp; &nbsp;KATA, FRASA, KALIMAT</strong>&nbsp;<br />\r\n&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<p style=\"text-align:justify\">(1) &nbsp;&nbsp; &nbsp;<strong>Kata (word)</strong> adalah sekumpulan huruf yang mengandung suatu arti.<br />\r\nContoh:&nbsp;<br />\r\n<strong>high, tall, house, room, books</strong></p>\r\n\r\n<hr />\r\n<p style=\"text-align:justify\">(2)&nbsp;&nbsp; &nbsp;<strong>Frasa (phrase)</strong> adalah satu atau sekelompok kata yang mengandung arti tetapi bukan kalimat. Jadi, kata sudah pasti adalah frasa, tetapi frasa belum tentu adalah kata.<br />\r\nContoh:&nbsp;<br />\r\n<strong>a high building, in the room, the big house, a pen, shoes, John</strong></p>\r\n\r\n<hr />\r\n<p style=\"text-align:justify\">(3) &nbsp;&nbsp; &nbsp;Kalimat (sentence) adalah sekelompok kata yang mempunyai subjek, predikat dan dapat berdiri sendiri.<br />\r\nContoh:&nbsp;<br />\r\n(a)&nbsp;&nbsp; &nbsp;<strong>I studied the history of Indonesia.</strong><br />\r\n(b)&nbsp;&nbsp; &nbsp;<strong>He likes swimming. &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;</strong></p>\r\n</div>\r\n\r\n<p style=\"text-align:justify\"><br />\r\n<strong>B.&nbsp;&nbsp; &nbsp;KONSEP DASAR KALIMAT BAHASA INGGRIS</strong><br />\r\n&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<p style=\"text-align:justify\"><strong>Kalimat bahasa Inggris harus mempunyai kata kerja utama.</strong> Tanpa kata kerja utama, kalimat bahasa Inggris adalah kalimat yang salah seperti dalam kalimat berikut:<br />\r\n(1)&nbsp;&nbsp; &nbsp;<s><strong>He smart.</strong></s> (Dia pintar.)<br />\r\n(2)&nbsp;&nbsp; &nbsp;<s><strong>He a student.</strong></s> (Dia seorang siswa.)<br />\r\n(3)&nbsp;&nbsp; &nbsp;<s><strong>He from Indonesia.</strong></s> (Dia dari Indonesia.)</p>\r\n\r\n<hr />\r\n<p style=\"text-align:justify\">Mengapa kalimat di atas salah?<br />\r\nKalimat di atas salah karena kalimat di atas tidak mempunyai kata kerja utama. Kalimat di atas seharusnya adalah:<br />\r\n(1)&nbsp;&nbsp; &nbsp;He <strong>is</strong> smart.<br />\r\n(2)&nbsp;&nbsp; &nbsp;He <strong>is</strong> a student.<br />\r\n(3)&nbsp;&nbsp; &nbsp;He<strong> is</strong> from Indonesia.</p>\r\n</div>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<p style=\"text-align:justify\">Kita menambahkan<strong> is</strong> pada kalimat di atas. <strong>Mengapa?</strong> Karena<strong> is</strong> adalah kata <strong>kerja bantu (helping verb)</strong>, yaitu kata kerja yang membantu kalimat bahasa Inggris yang tidak memiliki kata kerja utama.</p>\r\n</div>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<p style=\"text-align:justify\">Perhatikan kata ganti berikut yang menggunakan kata kerja bantu &nbsp;<strong>be (am, is, are).</strong><br />\r\n(1) &nbsp;I <strong>am</strong> smart.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (2) &nbsp;He <strong>is</strong> smart.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(5) &nbsp;You <strong>are</strong> smart.<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (3) &nbsp;She <strong>is</strong> smart.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (6) &nbsp;We <strong>are</strong> smart.&nbsp;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (4) &nbsp;It <strong>is</strong> smart.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (7) &nbsp;They <strong>are</strong> smart.&nbsp;&nbsp;</p>\r\n</div>\r\n'),
+(3, 1, 2, 1, 'THE SIMPLE PRESENT TENSE, ADVERBS OF FREQUENCY', '<p style=\"text-align:justify\"><strong>A.&nbsp;&nbsp; &nbsp;KALIMAT YANG MEMPUNYAI KATA KERJA UTAMA</strong></p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<p style=\"text-align:justify\">Setelah kita mempelajari kalimat bahasa Inggris yang tidak mempunyai kata kerja utama, marilah kita pelajari kalimat bahasa Inggris yang mempunyai kata kerja utama. Untuk kalimat bahasa Inggris yang mempunyai kata kerja utama, kita langsung saja menggunakan kata kerja tersebut tanpa menggunakan kata kerja bantu.</p>\r\n</div>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\">Contoh:</p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<div style=\"background-color:white; padding:5px\">\r\n<p style=\"text-align:justify\"><strong>I work in the morning</strong><em>.</em></p>\r\n\r\n<p style=\"text-align:justify\">Karena kata <strong>work</strong> adalah kata kerja utama, kita tidak menggunakan kata kerja bantu <strong>am</strong> untuk membuat kalimat tersebut. Jika kita menggunakan <strong>am</strong> untuk membuat kalimat, kalimatnya menjadi <strong><s>I am work in the morning</s> </strong>. Di dalam kalimat ini ada dua kata kerja, yaitu kata kerja bantu <strong>am</strong> dan kata kerja utama <strong>work</strong>. Hal ini tidak diperbolehkan. Sebelumnya, tentu kita harus tahu apa itu kata kerja. <strong>Kata kerja</strong> adalah kata yang menunjukkan suatu aksi, kejadian atau keadaan. Contoh kata kerja adalah: <strong>dance</strong>, <strong>look, play</strong>,<strong> read</strong>,<strong> study</strong>,<strong> write</strong></p>\r\n</div>\r\n</div>\r\n\r\n<p style=\"text-align:justify\"><br />\r\nCara membentuk <strong>the simple present tense</strong>:<br />\r\n&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<table border=\"0\" cellpadding=\"20\" cellspacing=\"1\">\r\n	<tbody>\r\n		<tr>\r\n			<td style=\"text-align:justify\"><strong>rumus</strong></td>\r\n			<td style=\"text-align:justify\"><strong>subject </strong>(<strong>I</strong>/<strong> we</strong>/<strong> you</strong>/<strong> they</strong>)<strong> + infinitive </strong>atau<br />\r\n			<strong>subject </strong>(<strong>he</strong>/<strong> she</strong>/<strong> it</strong>)<strong> + infinitive + s </strong></td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:justify\"><strong>Negative</strong>&nbsp;&nbsp;&nbsp;&nbsp;<br />\r\n			<strong>Statements:</strong>.</td>\r\n			<td>\r\n			<p style=\"text-align:justify\">I/ You/ We/ They <strong> do not</strong> work.<br />\r\n			He/ She/ It <strong> does not</strong> work</p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:justify\"><strong>Questions:</strong></td>\r\n			<td style=\"text-align:justify\"><strong>Do</strong> I/ you/ we/ they work?<br />\r\n			<strong>Does</strong> he/ she/ it work?</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:justify\"><strong>Short Answers:</strong></td>\r\n			<td>\r\n			<p style=\"text-align:justify\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I/ you/ we/ they <strong> do</strong>.<br />\r\n			Yes&nbsp; <strong>{</strong>&nbsp; he/ she/ it <strong> does</strong>.</p>\r\n\r\n			<p style=\"text-align:justify\">No&nbsp;&nbsp; <strong>{</strong>&nbsp; I/ you/ we/ they <strong> do not</strong>/<strong>don&#39;t</strong>.<br />\r\n			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; he/ she/ it <strong> does not</strong>/<strong>doesn&#39;t</strong>.</p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:justify\">&nbsp;</td>\r\n			<td style=\"text-align:justify\">&nbsp;</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n</div>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border-radius:10px; border:1px solid #000000; padding:5px 10px\">\r\n<p style=\"text-align:justify\"><strong>`do not&#39; </strong>dapat disingkat <strong>don&#39;t</strong>,<strong> </strong>dan<strong> does not </strong>disingkat <strong>doesn&#39;t</strong>.</p>\r\n</div>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<p style=\"text-align:justify\">Kata kerja dengan subjek <strong>he/ she/ it</strong> dalam kalimat di atas ditambah dengan huruf <strong>s</strong>. Mengapa demikian? Itu adalah satu aturan yang sudah disepakati oleh pemakai bahasa Inggris. Kalau begitu bagaimana kita mempelajarinya? Ya, hafalkan saja. Semua yang belajar bahasa Inggris hafal bahwa untuk subjek<strong> he</strong>/<strong> she</strong>/<strong> it</strong>, kita harus menambahkan huruf <strong>s</strong> pada kata kerjanya (untuk tata cara penambahan <strong>-s</strong>, lihat <strong>Appendix 1</strong>).</p>\r\n</div>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border-radius:10px; border:1px solid #000000; padding:5px 10px\">\r\n<p style=\"text-align:justify\">Kata kerja yang menggunakan subjek <strong>I</strong>/<strong> we</strong>/ <strong>you</strong>/ <strong>they </strong>dalam kalimat di atas tidak ditambahkan huruf <strong>s</strong> karena kita menambahkan huruf <strong>s</strong> hanya pada kata kerja yang subjeknya adalah:<br />\r\n<strong>he</strong>/<strong> she</strong>/<strong> it</strong> saja.</p>\r\n</div>\r\n'),
 (4, 1, 3, 0, 'PRONOUNS: SUBJECT, POSSESSIVE, OBJECT, REFLEXIVE', ''),
 (5, 1, 4, 0, 'HAVE, HAVE GOT, HAVE TO, HAVE GOT TO', ''),
 (6, 1, 5, 0, 'THE PRESENT CONTINUOUS TENSE, THE SIMPLE PRESENT TENSE WITH NON-ACTION VERBS', ''),
-(7, 2, 1, 1, 'rrt', 'rtty');
+(7, 2, 1, 1, 'rrt', '<div style=\"align-items:center; display:flex\">\r\n<p>&nbsp;</p>\r\n\r\n<div class=\"soundPlayer\"><a class=\"sm2_button\" href=\"assets/audio/HowToSayIt/sample.ogg\" title=\"sample.ogg\">&nbsp;</a></div>\r\n\r\n<p>&nbsp;asajshakshak</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n</div>\r\n\r\n<p>&nbsp;</p>\r\n'),
+(9, 1, 1, 2, 'BE: AM, IS, ARE', '<div style=\"background:#eeeeee; border-radius:15px; border:1px solid #000000; padding:5px 10px\">\r\n<p style=\"text-align:justify\">(a)&nbsp;&nbsp; <strong>&lsquo;I&rsquo;</strong> dibantu oleh kata kerja bantu <strong>am</strong>.<br />\r\n(b)&nbsp;&nbsp; <strong>&lsquo;we&rsquo;, you, they</strong> dibantu oleh kata kerja bantu <strong>are</strong>.<br />\r\n(c)&nbsp;&nbsp; <strong>&lsquo;he&rsquo;, she, it</strong> dibantu oleh kata kerja bantu <strong>is</strong>.</p>\r\n</div>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<p style=\"text-align:justify\">Ada empat bentuk kalimat yang menggunakan <strong>kata kerja bantu &lsquo;be&rsquo;</strong> tanpa kata kerja utama.</p>\r\n</div>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<p style=\"text-align:justify\"><strong>(a)&nbsp;&nbsp; SUBJECT + BE + ADJECTIVE</strong><br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Contoh:<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1)&nbsp;&nbsp; I <strong>am busy</strong>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (5)&nbsp;&nbsp; We <strong>are happy</strong>.<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2)&nbsp;&nbsp; He <strong>is</strong> <strong>smart</strong>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (6)&nbsp;&nbsp; You <strong>are wrong</strong>.<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (3)&nbsp;&nbsp; She <strong>is beautiful</strong>.&nbsp; (7)&nbsp;&nbsp; They <strong>are naughty</strong>.<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (4)&nbsp;&nbsp; It <strong>is right</strong>.</p>\r\n\r\n<hr />\r\n<p style=\"text-align:justify\">Kalimat di atas menggunakan <strong>am, is </strong>dan<strong> are (kata kerja bantu)</strong> karena <strong>I, he, she, it, we, you</strong> dan <strong>they</strong> adalah <strong>pronoun (kata ganti)</strong>, dan <strong>busy, smart, beautiful, right, happy, wrong</strong> dan <strong>naughty</strong> adalah <strong>adjective (kata sifat)</strong>.</p>\r\n\r\n<hr />\r\n<p style=\"text-align:justify\"><strong>(b)&nbsp;&nbsp; SUBJECT + BE + NOUN PHRASE</strong><br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Contoh:<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1)&nbsp;&nbsp; I <strong>am a teacher</strong>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (5)&nbsp;&nbsp; We <strong>are doctors</strong>.<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2)&nbsp;&nbsp; He <strong>is a lawyer</strong>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (6)&nbsp;&nbsp; You <strong>are a sportsman</strong>.<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (3)&nbsp;&nbsp; She <strong>is a student</strong>.&nbsp;&nbsp;&nbsp; (7)&nbsp;&nbsp; They <strong>are farmers</strong>.<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (4)&nbsp;&nbsp; It <strong>is a book</strong>.</p>\r\n\r\n<hr />\r\n<p style=\"text-align:justify\">Kalimat di atas menggunakan kata <strong>kerja bantu &lsquo;am, is, are&rsquo;</strong> karena <strong>I, he, she, it, we, you</strong> dan <strong>they</strong> adalah <strong>pronoun (kata ganti)</strong>, dan <strong>a teacher, a lawyer, a student, a book, doctors, a sportsman</strong> dan <strong>farmers adalah noun phrase (frasa benda)</strong>.</p>\r\n\r\n<hr />\r\n<p style=\"text-align:justify\"><strong>(c)&nbsp;&nbsp; SUBJECT + BE + PREPOSITIONAL PHRASE/ADVERB OF PLACE</strong><br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Contoh:<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1)&nbsp;&nbsp; I am <strong>from Sumatra</strong>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (5)&nbsp;&nbsp; We are <strong>at home</strong>.<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2)&nbsp;&nbsp; He is <strong>on the phone</strong>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (6)&nbsp;&nbsp; You are <strong>here</strong>.<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (3)&nbsp;&nbsp; She is <strong>in the living-room</strong>.&nbsp;&nbsp;&nbsp; (7)&nbsp;&nbsp; They are <strong>at work</strong>.<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (4)&nbsp;&nbsp; It is <strong>in the drawer</strong>.</p>\r\n\r\n<hr />\r\n<p style=\"text-align:justify\">Kalimat di atas menggunakan <strong>am, is, are (kata kerja bantu)</strong> karena <strong>I, he, she, it, we, you</strong> dan <strong>they</strong> adalah <strong>pronoun (kata ganti)</strong>, dan <strong>from Sumatra, on the phone, in the living-room, in the drawer, at home, at work</strong> adalah <strong>prepositional phrase</strong>, yaitu <strong>suatu frasa yang dimulai dengan kata depan (preposition) &lsquo;from, on, in, at&rsquo;</strong>, sedangkan <strong>here</strong> adalah <strong>adverb (kata keterangan)</strong>.</p>\r\n\r\n<hr />\r\n<p style=\"text-align:justify\">Beberapa contoh <strong>adverb of place</strong> adalah: <strong>there</strong> (di sana), <strong>here</strong> (di sini), <strong>upstairs</strong> (di atas), <strong>downstairs</strong> (di bawah), <strong>everywhere</strong> (di mana saja), <strong>abroad</strong> (di/ke luar negeri)</p>\r\n</div>\r\n'),
+(10, 1, 1, 3, 'BE: AM, IS, ARE', '<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<p style=\"text-align:justify\"><strong>(d)&nbsp;&nbsp; SUBJECT + BE + PRONOUN</strong><br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Contoh:<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1)&nbsp;&nbsp; It is <strong>hers</strong>.&nbsp;&nbsp;&nbsp; (4) It&rsquo;s <strong>him</strong>.<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2)&nbsp;&nbsp; It is <strong>mine</strong>.&nbsp;&nbsp; (5) They are <strong>yours</strong>.<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (3)&nbsp;&nbsp; It&rsquo;s <strong>me</strong>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (6) She is <strong>mine</strong>.</p>\r\n</div>\r\n\r\n<p style=\"text-align:justify\"><br />\r\n<strong>C. NOUNS (KATA BENDA)</strong>&nbsp;<br />\r\n&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<p style=\"text-align:justify\"><strong>&lsquo;nouns&rsquo;</strong> adalah kata benda, yaitu kata-kata yang memberi nama pada orang, benda, tempat atau ide.<br />\r\nContoh:<br />\r\n(a)&nbsp;&nbsp; <strong>coffee, girl, book, table, water</strong><br />\r\n(b)&nbsp;&nbsp; <strong>Mr. Johnson, Miss Lucy</strong><br />\r\n(c)&nbsp;&nbsp; <strong>freedom, justice, philosophy, democracy</strong><br />\r\n(d)&nbsp;&nbsp; <strong>Jakarta, Tokyo, hospital, factory, supermarket</strong></p>\r\n</div>\r\n\r\n<p style=\"text-align:justify\"><br />\r\n<strong>D. ADJECTIVES (KATA SIFAT)</strong><br />\r\n&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<p style=\"text-align:justify\"><strong>&lsquo;adjectives&rsquo;</strong> adalah kata sifat, yaitu kata-kata yang menerangkan kata benda.<br />\r\nContoh:<br />\r\n<strong>beautiful, interesting, smart, busy, good, sophisticated, confused, surprising</strong></p>\r\n</div>\r\n\r\n<p style=\"text-align:justify\"><br />\r\n<strong>E. PREPOSITIONS (KATA DEPAN)</strong><br />\r\n&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<p style=\"text-align:justify\"><strong>&lsquo;prepositions&rsquo;</strong> adalah kata depan, yaitu kata-kata seperti on, in, at, about yang digunakan bersama kata benda dan biasanya ditempatkan di depan kata benda.<br />\r\nContoh:<br />\r\n<strong>in the drawer, at home, at work, on the table, about women</strong></p>\r\n</div>\r\n\r\n<p style=\"text-align:justify\"><br />\r\n<strong>F. NOUN PHRASES, PREPOSITIONAL PHRASES,ADJECTIVE PHRASES</strong><br />\r\n&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<p style=\"text-align:justify\">(1)&nbsp;&nbsp; <strong>&lsquo;noun phrases&rsquo;</strong> adalah frasa yang berfungsi sebagai kata benda.<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Contoh:<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>a book, hot coffee, water, a beautiful girl</strong><br />\r\n(2)&nbsp;&nbsp; <strong>&lsquo;prepositional phrases&rsquo;</strong> adalah frasa yang dimulai dengan preposisi.<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Contoh:<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>at work, at home, about the book, in the kitchen</strong><br />\r\n(3)&nbsp;&nbsp; <strong>&lsquo;adjective phrases&rsquo;</strong> adalah frasa yang berfungsi sebagai kata sifat.<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Contoh:<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>ten years old, blue, green, ready-made, new-born, absent-minded</strong></p>\r\n</div>\r\n'),
+(11, 1, 1, 4, 'BE: AM, IS, ARE', '<p style=\"text-align:justify\"><strong>G. CARA MEMBENTUK KALIMAT TANYA DAN NEGATIF</strong><br />\r\n&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<p style=\"text-align:justify\">Untuk membentuk kalimat tanya, kita cukup memindahkan kata kerja bantu<br />\r\n<strong>be (am, is, are)</strong> ke depan subjek kalimat. Untuk membentuk kalimat negatif, kita cukup menambahkan <strong>not</strong> setelah kata kerja bantu <strong>be (am, is, are)</strong>.</p>\r\n</div>\r\n\r\n<p style=\"text-align:justify\"><br />\r\nContoh:&nbsp;<br />\r\n&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<p style=\"text-align:justify\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I <strong>am</strong><br />\r\nStatements:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; He/ She/ It <strong>is</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>}</strong>&nbsp;&nbsp;&nbsp;&nbsp; smart.<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You/ We/ They <strong>are</strong></p>\r\n\r\n<hr />\r\n<p style=\"text-align:justify\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I <strong>am</strong><br />\r\nNegative statements:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; He/ She/ It <strong>is</strong> not&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>}&nbsp;&nbsp;&nbsp;&nbsp; </strong>smart.<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You/ We/ They <strong>are</strong></p>\r\n\r\n<hr />\r\n<p style=\"text-align:justify\"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Am</strong> I<br />\r\nQuestions:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Is</strong> he/ she/ it&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>}&nbsp;&nbsp;&nbsp;&nbsp; </strong>smart?<br />\r\n<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Are</strong> you/ we/ they</p>\r\n\r\n<hr />\r\n<p style=\"text-align:justify\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I <strong>am</strong>.<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Yes,&nbsp; <strong>{</strong>&nbsp;&nbsp;&nbsp;&nbsp; he/ she/ it <strong>is</strong>.<br />\r\nShort Answers:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; you/ we/ they <strong>are</strong>.<br />\r\n<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I <strong>am not</strong>.<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No,&nbsp;&nbsp; <strong>{</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; he/ she/ it <strong>is not</strong>.<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; you/ we/ they <strong>are not</strong>.</p>\r\n</div>\r\n\r\n<p style=\"text-align:justify\"><br />\r\nPerhatikan singkatan berikut:<br />\r\n&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<p style=\"text-align:justify\"><strong>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +&nbsp; am&nbsp;&nbsp;&nbsp; &rarr; I&rsquo;m&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>| <strong>I&rsquo;m</strong> at home.<br />\r\n<strong>she&nbsp;&nbsp;&nbsp; +&nbsp; is&nbsp;&nbsp;&nbsp;&nbsp; &rarr; she&rsquo;s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>| <strong>She&rsquo;s</strong> at home.<br />\r\n<strong>he&nbsp;&nbsp;&nbsp;&nbsp; +&nbsp;&nbsp; is&nbsp;&nbsp;&nbsp;&nbsp; &rarr; he&rsquo;s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>| <strong>He&rsquo;s</strong> at home.<br />\r\n<strong>it&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +&nbsp;&nbsp; is&nbsp;&nbsp;&nbsp;&nbsp; &rarr; it&rsquo;s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>| <strong>It&rsquo;s</strong> at home.<br />\r\n<strong>you&nbsp;&nbsp;&nbsp; +&nbsp; are&nbsp;&nbsp;&nbsp; &rarr; you&rsquo;re&nbsp;&nbsp; </strong>| <strong>You&rsquo;re</strong> at home.<br />\r\n<strong>we&nbsp;&nbsp;&nbsp;&nbsp; +&nbsp; are&nbsp;&nbsp;&nbsp; &rarr; we&rsquo;re&nbsp;&nbsp;&nbsp; </strong>| <strong>We&rsquo;re</strong> at home.<br />\r\n<strong>they&nbsp;&nbsp; +&nbsp; are&nbsp;&nbsp;&nbsp; &rarr; they&rsquo;re&nbsp; </strong>| <strong>They&rsquo;re</strong> at home.<br />\r\n<strong>is&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +&nbsp; not&nbsp;&nbsp;&nbsp; &rarr; isn&rsquo;t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>| <strong>She isn&rsquo;t</strong> at home.<br />\r\n<strong>are&nbsp;&nbsp;&nbsp;&nbsp; +&nbsp; not&nbsp;&nbsp;&nbsp; &rarr; aren&rsquo;t&nbsp;&nbsp;&nbsp; </strong>| <strong>They aren&rsquo;t</strong> at home.</p>\r\n</div>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<p style=\"text-align:justify\">(1)&nbsp;&nbsp; Untuk kombinasi <strong>pronoun + be</strong> (kalimat positif) di akhir kalimat, kita tidak dapat menyingkatnya:<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Contoh:<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (a)&nbsp;&nbsp; <strong>Yes, I am</strong>. (Bukan <s><strong>Yes, I&rsquo;m</strong></s>.)<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (b)&nbsp;&nbsp; <strong>Yes, she is</strong>. (Bukan <s><strong>Yes, she&rsquo;s</strong></s>)<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (c)&nbsp;&nbsp; <strong>&lsquo;am + not&rsquo;</strong> tidak dapat disingkat.<br />\r\n(2)&nbsp;&nbsp; Dalam bahasa Inggris non-standard, <strong>am not, is not</strong>, dan <strong>are not</strong> biasanya disingkat menjadi <strong>ain&rsquo;t.</strong></p>\r\n</div>\r\n'),
+(12, 1, 2, 2, 'THE SIMPLE PRESENT TENSE, ADVERBS OF FREQUENCY', '<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<p style=\"text-align:justify\">Bagaimana dengan kalimat tanya dan kalimat negatif? Untuk membentuk<br />\r\nkalimat tanya, kita menggunakan kata kerja bantu <strong>do </strong>pada kalimat dengan subjek</p>\r\n\r\n<p style=\"text-align:justify\"><strong>I/ we/ you/ they</strong>, sedangkan kita menggunakan kata kerja bantu <strong>does </strong>jika subjek kalimat adalah<strong> he/ she/ it</strong>, dan kata kerja berubah kembali menjadi bentuk <strong>infinitive </strong>(tanpa s).</p>\r\n</div>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<p style=\"text-align:justify\">Kita menggunakan <strong>do not</strong> untuk membuat kalimat negatif jika subjek kalimatnya<strong> I/ we/ you/ they</strong> dan <strong>does not </strong>jika subjeknya adalah <strong>he/ she/ it.</strong></p>\r\n</div>\r\n\r\n<p style=\"text-align:justify\"><br />\r\nKalimat-kalimat seperti yang kita bahas di atas disebut <strong>the simple present tense.</strong><br />\r\n&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border-radius:15px; border:1px solid #000000; padding:5px 10px\">\r\n<p style=\"text-align:justify\"><strong>&lsquo;the simple present tense&rsquo;</strong> adalah suatu kalimat yang perubahan kata kerjanya menyatakan kegiatan yang dilakukan sehari-hari, suatu kebiasaan, suatu kegiatan yang dilakukan secara teratur dan suatu kenyataan.</p>\r\n</div>\r\n\r\n<p style=\"text-align:justify\"><br />\r\nKapan kita menggunakan kalimat di atas termasuk kalimat-kalimat yang kita pelajari di unit 1, yaitu kalimat-kalimat yang tidak mempunyai kata kerja utama?<br />\r\n&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<div style=\"background:#ffffff; border:1px solid #cccccc; padding:5px 10px\">\r\n<p style=\"text-align:justify\">timeline</p>\r\n\r\n<p style=\"text-align:justify\"><img alt=\"TIme line Image\" src=\"http://localhost/assets/images/book/timeline_how_to_say_it_unit2.jpeg\" style=\"margin:auto; padding:10px 10%\" /></p>\r\n</div>\r\n</div>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<table border=\"1\" cellpadding=\"20\" cellspacing=\"1\" style=\"background-color:white; width:100%\">\r\n	<tbody>\r\n		<tr>\r\n			<td style=\"text-align:justify\"><strong>&lsquo;the simple present tense&rsquo;</strong> digunakan untuk<br />\r\n			menyatakan:</td>\r\n			<td style=\"text-align:justify\">Keterangan</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:justify\"><strong>(1)&nbsp;&nbsp; Kegiatan sehari-hari:</strong><br />\r\n			(a) He <strong>works </strong>at Hotel Indonesia.<br />\r\n			(b) She <strong>takes </strong>care of patients.<br />\r\n			(c) They <strong>go </strong>to the office by bus.</td>\r\n			<td>\r\n			<div class=\"Basic-Graphics-Frame\">\r\n			<p style=\"text-align:justify\">Kalimat ini menyatakan kegiatan sehari-hari yang kita lakukan dan akan kita lakukan terus karena kita belum tahu kapan kita akan berhenti melakukan kegiatan ini.</p>\r\n			</div>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:justify\"><strong>(2)&nbsp;&nbsp; Kebiasaan:</strong><br />\r\n			(a) He <strong>smokes</strong>.<br />\r\n			(b) He <strong>drinks </strong>coffee.<br />\r\n			(c) He <strong>sneezes </strong>almost every hour.</td>\r\n			<td>\r\n			<div class=\"Basic-Graphics-Frame\">\r\n			<p style=\"text-align:justify\">Kalimat ini menyatakan suatu kebiasaan atau dalam bahasa Inggris disebut <strong>habit</strong>.</p>\r\n			</div>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:justify\"><strong>(3)&nbsp;&nbsp; Kegiatan yang dilakukan secara teratur:</strong><br />\r\n			(a) She <strong>plays </strong>the piano at four o&rsquo;clock.<br />\r\n			(b) He<strong> visits </strong>his mother once a month.</td>\r\n			<td>\r\n			<div class=\"Basic-Graphics-Frame\">\r\n			<p style=\"text-align:justify\">Kalimat ini menyatakan suatu kegiatan yang dilakukan secara teratur.</p>\r\n			</div>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:justify\"><strong>(4)&nbsp;&nbsp; Suatu kenyataan:</strong><br />\r\n			(a) She<strong> is</strong> beautiful.<br />\r\n			(b) The sun <strong>sets</strong> in the west.</td>\r\n			<td style=\"text-align:justify\">Kalimat ini menyatakan suatu kenyataan yang masih berlaku sekarang.</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n</div>\r\n\r\n<p style=\"text-align:justify\"><br />\r\nJadi, kalau kita ingin menyatakan keempat hal tersebut dalam bahasa Inggris, kita harus menggunakan kalimat<strong> the simple present tense.</strong><br />\r\n&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<p style=\"text-align:justify\">Kalau ada yang bertanya <strong>What do you do?</strong> Kita akan menjawab kalimat ini dengan<strong> I am a student</strong> karena yang ditanyakan adalah <strong>Apa yang Anda lakukan sehari-hari?</strong> Karena saya sehari-hari belajar sehingga jawaban saya adalah <strong>I am a student because I study regularly</strong>. Jika Anda adalah pekerja, jawaban Anda adalah<strong> I am an employee</strong>. Mengapa? <strong>Because I work everyday</strong>.</p>\r\n\r\n<p style=\"text-align:justify\">Jadi, kita perlu mengetahui konsep kalimat <strong>the simple present tense</strong> ini, dan kapan kita menggunakannya. Kalau tidak, kita akan selalu salah berbicara dalam bahasa Inggris. Hal ini adalah hal yang sangat mendasar yang harus kita kuasai untuk melangkah ke <strong>unit </strong>selanjutnya.</p>\r\n</div>\r\n'),
+(13, 1, 2, 3, 'THE SIMPLE PRESENT TENSE, ADVERBS OF FREQUENCY', '<p style=\"text-align:justify\"><strong>B. ADVERBS OF FREQUENCY</strong></p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<p style=\"text-align:justify\">Dalam bahasa Inggris kita mengenal juga kata keterangan yang disebut <strong>adverbs.</strong></p>\r\n</div>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<p style=\"text-align:justify\"><strong>&lsquo;adverbs&rsquo;</strong> adalah <strong>kata-kata yang menerangkan kata kerja, kata sifat, kata keterangan lainnya dan seluruh kalimat</strong>.</p>\r\n</div>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\">Di sini kita hanya akan membahas <strong>adverbs of frequency</strong>, yaitu kata keterangan yang menerangkan seberapa sering <strong>(how often)</strong> suatu kegiatan dilakukan, atau suatu keadaan terjadi.<br />\r\nContoh adverbs of frequency ini adalah:</p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<table border=\"0\" cellpadding=\"15\" cellspacing=\"1\">\r\n	<tbody>\r\n		<tr>\r\n			<td style=\"text-align:justify\">(1)&nbsp;&nbsp; <strong>always</strong></td>\r\n			<td style=\"text-align:justify\">(selalu)</td>\r\n			<td style=\"text-align:justify\">berarti <strong>all of the time </strong></td>\r\n			<td style=\"text-align:justify\"><strong>100 %</strong></td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:justify\">(2)&nbsp;&nbsp; <strong>usually </strong></td>\r\n			<td style=\"text-align:justify\">(biasanya)</td>\r\n			<td style=\"text-align:justify\">berarti <strong>most of the time</strong></td>\r\n			<td style=\"text-align:justify\">&nbsp;</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:justify\">(3)&nbsp;&nbsp; <strong>often </strong></td>\r\n			<td style=\"text-align:justify\">(sering)</td>\r\n			<td style=\"text-align:justify\">berarti <strong>much of the time </strong></td>\r\n			<td style=\"text-align:justify\">&nbsp;</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:justify\">&nbsp;</td>\r\n			<td style=\"text-align:justify\">&nbsp;</td>\r\n			<td style=\"text-align:justify\">&nbsp;</td>\r\n			<td style=\"text-align:justify\"><strong>50 % </strong></td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:justify\">(4)&nbsp;&nbsp; <strong>sometimes </strong></td>\r\n			<td style=\"text-align:justify\">(kadang-kadang)</td>\r\n			<td style=\"text-align:justify\">berarti <strong>some of the time </strong></td>\r\n			<td style=\"text-align:justify\">&nbsp;</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:justify\">(5)&nbsp;&nbsp; <strong>seldom </strong></td>\r\n			<td style=\"text-align:justify\">(jarang)</td>\r\n			<td style=\"text-align:justify\">berarti <strong>almost never </strong></td>\r\n			<td style=\"text-align:justify\">&nbsp;</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:justify\">(6)&nbsp;&nbsp; <strong>never </strong></td>\r\n			<td style=\"text-align:justify\">(tidak pernah)</td>\r\n			<td style=\"text-align:justify\">berarti <strong>not at any time </strong></td>\r\n			<td style=\"text-align:justify\"><strong>0 %</strong></td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n</div>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<p style=\"text-align:justify\">Persentase di sebelah kanan di atas menyatakan seberapa sering kegiatan tersebut dilaksanakan, atau seberapa sering sesuatu atau keadaan itu terjadi.</p>\r\n</div>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\">Perhatikan posisi adverbs of frequency dalam kalimat:</p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<p style=\"text-align:justify\">(a) &lsquo;adverbs of frequency&rsquo; ditempatkan setelah kata kerja bantu &lsquo;be&rsquo;</p>\r\n\r\n<hr />\r\n<table border=\"0\" cellpadding=\"10\" cellspacing=\"1\">\r\n	<tbody>\r\n		<tr>\r\n			<td style=\"text-align:justify\">He</td>\r\n			<td style=\"text-align:justify\">+ is + <strong>{</strong></td>\r\n			<td style=\"text-align:justify\"><strong>always<br />\r\n			usually<br />\r\n			often<br />\r\n			sometimes<br />\r\n			seldom<br />\r\n			never</strong></td>\r\n			<td style=\"text-align:justify\"><strong>}</strong> early</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<hr />\r\n<p style=\"text-align:justify\">(b) <strong>&lsquo;adverbs of frequency&rsquo;</strong> ditempatkan di depan <strong>kata kerja utama</strong> dan <strong>setelah subyek</strong></p>\r\n\r\n<hr />\r\n<table border=\"0\" cellpadding=\"10\" cellspacing=\"1\">\r\n	<tbody>\r\n		<tr>\r\n			<td style=\"text-align:justify\">He + <strong>{</strong></td>\r\n			<td style=\"text-align:justify\"><strong>always<br />\r\n			usually<br />\r\n			often<br />\r\n			sometimes<br />\r\n			seldom<br />\r\n			never</strong></td>\r\n			<td style=\"text-align:justify\"><strong>}</strong> <strong>comes</strong> early</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n</div>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\">\r\n<p style=\"text-align:justify\"><strong>&lsquo;adverb of frequency&rsquo;</strong> ditempatkan setelah kata kerja bantu <strong>is</strong>, sedangkan dalam kalimat yang menggunakan kata kerja utama, posisi <strong>adverb of frequency</strong> ditempatkan sebelum kata kerja utama, dan tepat sesudah subyek kalimat.</p>\r\n</div>\r\n');
 
 -- --------------------------------------------------------
 
@@ -400,7 +402,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `ssid`, `foto`, `firstname`, `lastname`, `email`, `alamat`, `kontak`, `password`, `second_password`, `is_activated`, `activation_code`, `fpassword_key`, `trial`, `is_active`, `join_on`) VALUES
-(11, 'dfmrem0lk4c16l14fmjc4i77cp', '', 'Iqbal', 'Hasan', 'iqbalhasandc200@gmail.com', 'Jln. Tanjung Pura Nomor 5, kalideres Jakarta Barat.', '081294236473', '$2y$10$exPJhDUC3iQRM1YU5yP.P.MNH5khl9IKTEaujh2M6LhUiqWRw93NO', '$2y$10$wLXkoBQtVc5eqfPJG9jIE.BqKmodJD9TEqTRX0WfBwRYyjHIQKmWy', 0, NULL, 'FV38jKOso8xAQgsG', '', 1, '2019-12-18'),
+(11, '7ph6cv6h51k1omlnktl0i0hksj', '', 'Iqbal', 'Hasan', 'iqbalhasandc200@gmail.com', 'Jln. Tanjung Pura Nomor 5, kalideres Jakarta Barat.', '081294236473', '$2y$10$exPJhDUC3iQRM1YU5yP.P.MNH5khl9IKTEaujh2M6LhUiqWRw93NO', '$2y$10$wLXkoBQtVc5eqfPJG9jIE.BqKmodJD9TEqTRX0WfBwRYyjHIQKmWy', 0, NULL, 'FV38jKOso8xAQgsG', '', 1, '2019-12-18'),
 (12, '', '', 'herawati', 'naya', 'nayaya204@gmail.com', '', NULL, '$2y$10$exPJhDUC3iQRM1YU5yP.P.MNH5khl9IKTEaujh2M6LhUiqWRw93NO', 'nayaya', 0, NULL, '', '', 0, '2019-12-19'),
 (13, '', '', 'Roni', 'Ahmad', 'roni_aje@gmail.com', '', NULL, '$2y$10$exPJhDUC3iQRM1YU5yP.P.MNH5khl9IKTEaujh2M6LhUiqWRw93NO', 'rona', 0, NULL, '', '', 0, '2019-12-19'),
 (14, '', '', 'Dian ', 'Indah', 'dianindah330@gmail.com', '', NULL, '$2y$10$exPJhDUC3iQRM1YU5yP.P.MNH5khl9IKTEaujh2M6LhUiqWRw93NO', 'diamond', 0, NULL, '', '', 0, '2019-12-19'),
@@ -676,14 +678,38 @@ ALTER TABLE `users_book_catalog`
   ADD KEY `user_id` (`user_id`);
 
 --
+-- Indeks untuk tabel `users_order`
+--
+ALTER TABLE `users_order`
+  ADD PRIMARY KEY (`Order_id`);
+
+--
+-- Indeks untuk tabel `user_payment`
+--
+ALTER TABLE `user_payment`
+  ADD PRIMARY KEY (`payment_id`);
+
+--
+-- Indeks untuk tabel `user_section_admin`
+--
+ALTER TABLE `user_section_admin`
+  ADD PRIMARY KEY (`admin_id`);
+
+--
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
+
+--
+-- AUTO_INCREMENT untuk tabel `book`
+--
+ALTER TABLE `book`
+  MODIFY `book_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `book_chapter`
 --
 ALTER TABLE `book_chapter`
-  MODIFY `chapter_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `chapter_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT untuk tabel `site_lesson`
@@ -692,459 +718,70 @@ ALTER TABLE `site_lesson`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
+-- AUTO_INCREMENT untuk tabel `site_package`
+--
+ALTER TABLE `site_package`
+  MODIFY `pack_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT untuk tabel `site_package_detail`
+--
+ALTER TABLE `site_package_detail`
+  MODIFY `spd_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT untuk tabel `site_sentence`
+--
+ALTER TABLE `site_sentence`
+  MODIFY `sentence_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT untuk tabel `site_slider`
+--
+ALTER TABLE `site_slider`
+  MODIFY `id_slider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
 -- AUTO_INCREMENT untuk tabel `site_wod`
 --
 ALTER TABLE `site_wod`
   MODIFY `word_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
---
--- Database: `phpmyadmin`
---
-CREATE DATABASE IF NOT EXISTS `phpmyadmin` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
-USE `phpmyadmin`;
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `pma__bookmark`
---
-
-CREATE TABLE `pma__bookmark` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `dbase` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `user` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `label` varchar(255) CHARACTER SET utf8 NOT NULL DEFAULT '',
-  `query` text COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Bookmarks';
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `pma__central_columns`
---
-
-CREATE TABLE `pma__central_columns` (
-  `db_name` varchar(64) COLLATE utf8_bin NOT NULL,
-  `col_name` varchar(64) COLLATE utf8_bin NOT NULL,
-  `col_type` varchar(64) COLLATE utf8_bin NOT NULL,
-  `col_length` text COLLATE utf8_bin DEFAULT NULL,
-  `col_collation` varchar(64) COLLATE utf8_bin NOT NULL,
-  `col_isNull` tinyint(1) NOT NULL,
-  `col_extra` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `col_default` text COLLATE utf8_bin DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Central list of columns';
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `pma__column_info`
---
-
-CREATE TABLE `pma__column_info` (
-  `id` int(5) UNSIGNED NOT NULL,
-  `db_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `table_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `column_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `comment` varchar(255) CHARACTER SET utf8 NOT NULL DEFAULT '',
-  `mimetype` varchar(255) CHARACTER SET utf8 NOT NULL DEFAULT '',
-  `transformation` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `transformation_options` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `input_transformation` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `input_transformation_options` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Column information for phpMyAdmin';
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `pma__designer_settings`
---
-
-CREATE TABLE `pma__designer_settings` (
-  `username` varchar(64) COLLATE utf8_bin NOT NULL,
-  `settings_data` text COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Settings related to Designer';
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `pma__export_templates`
---
-
-CREATE TABLE `pma__export_templates` (
-  `id` int(5) UNSIGNED NOT NULL,
-  `username` varchar(64) COLLATE utf8_bin NOT NULL,
-  `export_type` varchar(10) COLLATE utf8_bin NOT NULL,
-  `template_name` varchar(64) COLLATE utf8_bin NOT NULL,
-  `template_data` text COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Saved export templates';
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `pma__favorite`
---
-
-CREATE TABLE `pma__favorite` (
-  `username` varchar(64) COLLATE utf8_bin NOT NULL,
-  `tables` text COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Favorite tables';
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `pma__history`
---
-
-CREATE TABLE `pma__history` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `username` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `db` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `table` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `timevalue` timestamp NOT NULL DEFAULT current_timestamp(),
-  `sqlquery` text COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='SQL history for phpMyAdmin';
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `pma__navigationhiding`
---
-
-CREATE TABLE `pma__navigationhiding` (
-  `username` varchar(64) COLLATE utf8_bin NOT NULL,
-  `item_name` varchar(64) COLLATE utf8_bin NOT NULL,
-  `item_type` varchar(64) COLLATE utf8_bin NOT NULL,
-  `db_name` varchar(64) COLLATE utf8_bin NOT NULL,
-  `table_name` varchar(64) COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Hidden items of navigation tree';
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `pma__pdf_pages`
---
-
-CREATE TABLE `pma__pdf_pages` (
-  `db_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `page_nr` int(10) UNSIGNED NOT NULL,
-  `page_descr` varchar(50) CHARACTER SET utf8 NOT NULL DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='PDF relation pages for phpMyAdmin';
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `pma__recent`
---
-
-CREATE TABLE `pma__recent` (
-  `username` varchar(64) COLLATE utf8_bin NOT NULL,
-  `tables` text COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Recently accessed tables';
-
---
--- Dumping data untuk tabel `pma__recent`
---
-
-INSERT INTO `pma__recent` (`username`, `tables`) VALUES
-('root', '[{\"db\":\"mobile_english_ebook\",\"table\":\"site_wod\"},{\"db\":\"mobile_english_ebook\",\"table\":\"site_lesson\"}]');
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `pma__relation`
---
-
-CREATE TABLE `pma__relation` (
-  `master_db` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `master_table` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `master_field` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `foreign_db` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `foreign_table` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `foreign_field` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Relation table';
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `pma__savedsearches`
---
-
-CREATE TABLE `pma__savedsearches` (
-  `id` int(5) UNSIGNED NOT NULL,
-  `username` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `db_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `search_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `search_data` text COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Saved searches';
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `pma__table_coords`
---
-
-CREATE TABLE `pma__table_coords` (
-  `db_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `table_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `pdf_page_number` int(11) NOT NULL DEFAULT 0,
-  `x` float UNSIGNED NOT NULL DEFAULT 0,
-  `y` float UNSIGNED NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Table coordinates for phpMyAdmin PDF output';
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `pma__table_info`
---
-
-CREATE TABLE `pma__table_info` (
-  `db_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `table_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `display_field` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Table information for phpMyAdmin';
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `pma__table_uiprefs`
---
-
-CREATE TABLE `pma__table_uiprefs` (
-  `username` varchar(64) COLLATE utf8_bin NOT NULL,
-  `db_name` varchar(64) COLLATE utf8_bin NOT NULL,
-  `table_name` varchar(64) COLLATE utf8_bin NOT NULL,
-  `prefs` text COLLATE utf8_bin NOT NULL,
-  `last_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Tables'' UI preferences';
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `pma__tracking`
---
 
-CREATE TABLE `pma__tracking` (
-  `db_name` varchar(64) COLLATE utf8_bin NOT NULL,
-  `table_name` varchar(64) COLLATE utf8_bin NOT NULL,
-  `version` int(10) UNSIGNED NOT NULL,
-  `date_created` datetime NOT NULL,
-  `date_updated` datetime NOT NULL,
-  `schema_snapshot` text COLLATE utf8_bin NOT NULL,
-  `schema_sql` text COLLATE utf8_bin DEFAULT NULL,
-  `data_sql` longtext COLLATE utf8_bin DEFAULT NULL,
-  `tracking` set('UPDATE','REPLACE','INSERT','DELETE','TRUNCATE','CREATE DATABASE','ALTER DATABASE','DROP DATABASE','CREATE TABLE','ALTER TABLE','RENAME TABLE','DROP TABLE','CREATE INDEX','DROP INDEX','CREATE VIEW','ALTER VIEW','DROP VIEW') COLLATE utf8_bin DEFAULT NULL,
-  `tracking_active` int(1) UNSIGNED NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Database changes tracking for phpMyAdmin';
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `pma__userconfig`
---
-
-CREATE TABLE `pma__userconfig` (
-  `username` varchar(64) COLLATE utf8_bin NOT NULL,
-  `timevalue` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `config_data` text COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='User preferences storage for phpMyAdmin';
-
---
--- Dumping data untuk tabel `pma__userconfig`
---
-
-INSERT INTO `pma__userconfig` (`username`, `timevalue`, `config_data`) VALUES
-('root', '2020-03-30 08:05:24', '{\"Console\\/Mode\":\"collapse\",\"lang\":\"id\"}');
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `pma__usergroups`
---
-
-CREATE TABLE `pma__usergroups` (
-  `usergroup` varchar(64) COLLATE utf8_bin NOT NULL,
-  `tab` varchar(64) COLLATE utf8_bin NOT NULL,
-  `allowed` enum('Y','N') COLLATE utf8_bin NOT NULL DEFAULT 'N'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='User groups with configured menu items';
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `pma__users`
---
-
-CREATE TABLE `pma__users` (
-  `username` varchar(64) COLLATE utf8_bin NOT NULL,
-  `usergroup` varchar(64) COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Users and their assignments to user groups';
-
---
--- Indexes for dumped tables
---
-
---
--- Indeks untuk tabel `pma__bookmark`
---
-ALTER TABLE `pma__bookmark`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indeks untuk tabel `pma__central_columns`
---
-ALTER TABLE `pma__central_columns`
-  ADD PRIMARY KEY (`db_name`,`col_name`);
-
---
--- Indeks untuk tabel `pma__column_info`
---
-ALTER TABLE `pma__column_info`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `db_name` (`db_name`,`table_name`,`column_name`);
-
---
--- Indeks untuk tabel `pma__designer_settings`
---
-ALTER TABLE `pma__designer_settings`
-  ADD PRIMARY KEY (`username`);
-
---
--- Indeks untuk tabel `pma__export_templates`
---
-ALTER TABLE `pma__export_templates`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `u_user_type_template` (`username`,`export_type`,`template_name`);
-
---
--- Indeks untuk tabel `pma__favorite`
---
-ALTER TABLE `pma__favorite`
-  ADD PRIMARY KEY (`username`);
-
---
--- Indeks untuk tabel `pma__history`
 --
-ALTER TABLE `pma__history`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `username` (`username`,`db`,`table`,`timevalue`);
-
---
--- Indeks untuk tabel `pma__navigationhiding`
---
-ALTER TABLE `pma__navigationhiding`
-  ADD PRIMARY KEY (`username`,`item_name`,`item_type`,`db_name`,`table_name`);
-
---
--- Indeks untuk tabel `pma__pdf_pages`
---
-ALTER TABLE `pma__pdf_pages`
-  ADD PRIMARY KEY (`page_nr`),
-  ADD KEY `db_name` (`db_name`);
-
---
--- Indeks untuk tabel `pma__recent`
---
-ALTER TABLE `pma__recent`
-  ADD PRIMARY KEY (`username`);
-
---
--- Indeks untuk tabel `pma__relation`
---
-ALTER TABLE `pma__relation`
-  ADD PRIMARY KEY (`master_db`,`master_table`,`master_field`),
-  ADD KEY `foreign_field` (`foreign_db`,`foreign_table`);
-
---
--- Indeks untuk tabel `pma__savedsearches`
---
-ALTER TABLE `pma__savedsearches`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `u_savedsearches_username_dbname` (`username`,`db_name`,`search_name`);
-
---
--- Indeks untuk tabel `pma__table_coords`
---
-ALTER TABLE `pma__table_coords`
-  ADD PRIMARY KEY (`db_name`,`table_name`,`pdf_page_number`);
-
---
--- Indeks untuk tabel `pma__table_info`
---
-ALTER TABLE `pma__table_info`
-  ADD PRIMARY KEY (`db_name`,`table_name`);
-
---
--- Indeks untuk tabel `pma__table_uiprefs`
---
-ALTER TABLE `pma__table_uiprefs`
-  ADD PRIMARY KEY (`username`,`db_name`,`table_name`);
-
---
--- Indeks untuk tabel `pma__tracking`
---
-ALTER TABLE `pma__tracking`
-  ADD PRIMARY KEY (`db_name`,`table_name`,`version`);
-
---
--- Indeks untuk tabel `pma__userconfig`
---
-ALTER TABLE `pma__userconfig`
-  ADD PRIMARY KEY (`username`);
-
---
--- Indeks untuk tabel `pma__usergroups`
+-- AUTO_INCREMENT untuk tabel `tbl_token_auth`
 --
-ALTER TABLE `pma__usergroups`
-  ADD PRIMARY KEY (`usergroup`,`tab`,`allowed`);
+ALTER TABLE `tbl_token_auth`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 
 --
--- Indeks untuk tabel `pma__users`
+-- AUTO_INCREMENT untuk tabel `users`
 --
-ALTER TABLE `pma__users`
-  ADD PRIMARY KEY (`username`,`usergroup`);
+ALTER TABLE `users`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT untuk tabel `users_book_catalog`
 --
+ALTER TABLE `users_book_catalog`
+  MODIFY `catalog_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT untuk tabel `pma__bookmark`
+-- AUTO_INCREMENT untuk tabel `users_order`
 --
-ALTER TABLE `pma__bookmark`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+ALTER TABLE `users_order`
+  MODIFY `Order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
--- AUTO_INCREMENT untuk tabel `pma__column_info`
+-- AUTO_INCREMENT untuk tabel `user_payment`
 --
-ALTER TABLE `pma__column_info`
-  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT;
+ALTER TABLE `user_payment`
+  MODIFY `payment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
---
--- AUTO_INCREMENT untuk tabel `pma__export_templates`
---
-ALTER TABLE `pma__export_templates`
-  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT untuk tabel `pma__history`
---
-ALTER TABLE `pma__history`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT untuk tabel `pma__pdf_pages`
---
-ALTER TABLE `pma__pdf_pages`
-  MODIFY `page_nr` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT untuk tabel `pma__savedsearches`
---
-ALTER TABLE `pma__savedsearches`
-  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
--- Database: `test`
+-- AUTO_INCREMENT untuk tabel `user_section_admin`
 --
-CREATE DATABASE IF NOT EXISTS `test` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `test`;
+ALTER TABLE `user_section_admin`
+  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

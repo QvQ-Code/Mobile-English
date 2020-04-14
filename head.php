@@ -36,6 +36,13 @@
       rel="stylesheet">
     <!-- font -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <!-- Sound Plugin -->
+    <link rel="stylesheet" type="text/css" href="office/ckeditor/plugins/soundPlayer/soundmanager2/bar-ui.css">
+    <link rel="stylesheet" type="text/css" href="office/ckeditor/plugins/soundPlayer/soundmanager2/360player.css">
+    <link rel="stylesheet" type="text/css" href="office/ckeditor/plugins/soundPlayer/soundmanager2/inlineplayer.css">
+    <link rel="stylesheet" type="text/css" href="office/ckeditor/plugins/soundPlayer/soundmanager2/mp3-player-button.css">
+
+    
     <!-- script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -44,4 +51,11 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.semanticui.min.css">
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" type="text/javascript"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.semanticui.min.js" type="text/javascript"></script>
+    <!-- Sound Plugin -->
+    <script type="text/javascript" src="office/ckeditor/plugins/soundPlayer/soundmanager2/soundmanager2-jsmin.js"></script>
+    <script type="text/javascript" src="office/ckeditor/plugins/soundPlayer/soundmanager2/bar-ui-min.js"></script>
+    <script type="text/javascript" src="office/ckeditor/plugins/soundPlayer/soundmanager2/360player-min.js"></script>
+    <script type="text/javascript" src="office/ckeditor/plugins/soundPlayer/soundmanager2/berniecode-animator-min.js"></script>
+    <script type="text/javascript" src="office/ckeditor/plugins/soundPlayer/soundmanager2/inlineplayer-min.js"></script>
+    <script type="text/javascript" src="office/ckeditor/plugins/soundPlayer/soundmanager2/mp3-player-button-min.js"></script>
 </head>

@@ -79,8 +79,14 @@
 .ck-content tr, td {
     border: none;
 }
-.ck-content div {
-    border: none!important;
+
+.ck-content table {
+    border: 2px solid #eee;
+}
+
+.ck-content table td {
+    padding: 5px 10px;
+    border: 2px solid #eee;
 }
 
 /* ckeditor5-list/theme/todolist.css */

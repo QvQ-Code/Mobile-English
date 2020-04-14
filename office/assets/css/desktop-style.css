@@ -1207,7 +1207,7 @@ input {border: none;}
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
   @media (max-width: 892px){
     .book-wrapper {

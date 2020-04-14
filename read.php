@@ -148,7 +148,7 @@ $chap_ref = $_GET['chap_ref'];
 
 		while ($row = $query3->fetch_assoc()) {
 		?>
-			<div id="#page<?php echo $row["page"];?>" class="ck-content" onmousedown="return false">
+			<div id="page<?php echo $row["page"];?>" class="ck-content" onmousedown="return false">
 				<?php 
 					if ($row !== NULL) {
 						echo $row['content']; 

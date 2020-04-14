@@ -41,13 +41,12 @@ class Book {
 		$util = new Utils();
 		$uploadOk = $util->upload_image($lock_dir, $file, $file_tmp, $file_size);
 
-		if ($uploadOk) {
-			$auth = new Auth();
-			$sql = "INSERT INTO `book` (`book_id`, `book_num`, `cover_img`, `name`, `sinop`) VALUES (NULL, '', '$cover', '$title', '$decription')";
-			$result = $auth->runQuery($sql);
-			if ($result) {
-				header("location: book.php");
-			}
+		$auth = new Auth();
+		$sql = "INSERT INTO `book` (`book_id`, `book_num`, `cover_img`, `name`, `sinop`) VALUES (NULL, '', '$cover', '$title', '$decription')";
+		$result = $auth->runQuery($sql);
+		
+		if ($result) {
+			header("location: book.php");
 		}
 	}
 
